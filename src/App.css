@@ -1,0 +1,222 @@
+::-webkit-scrollbar{
+  display: none;
+}
+
+#root{
+  background: #2F4A2C;
+}
+
+.color-primary{
+  background-color: #2F4A2C;
+}
+.color-secondry{
+  background-color: #F6A230;
+}
+
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.josefin-thin {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 100;
+}
+
+.josefin-extra-light {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 200;
+}
+
+.josefin-light {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+.josefin-regular {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+.josefin-medium {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+}
+
+.josefin-semibold {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+}
+
+.josefin-bold {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
+
+
+.marquee-container::-webkit-scrollbar{  
+  display: none;
+}
+
+.marquee_track {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee_list {
+  display: flex;
+  /* gap: 1.25rem; */
+  white-space: nowrap;
+  animation: marquee 47s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+@media (max-width: 320px){
+  .cta .cta-title{
+    font-size: 1.5rem;
+  }
+  .cta .cta-para{
+    font-size: 0.8rem;
+  }
+  .cta-button h2{
+    font-size: 0.85rem;
+  }
+  .cta-button .round{
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+  .samosa-plate img{
+    height: 8.5rem;
+  }
+  .snacks-container{
+    padding: 2rem 0;
+  }
+  .event-container .middle .image{
+    display: none;
+  }
+  .event-container .middle .content{
+    width: 100%;
+  }
+}
+
