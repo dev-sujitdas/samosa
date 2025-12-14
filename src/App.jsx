@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './App.css'
 import Navbar from './components/ui/Navbar'
 import Hero from './components/Hero'
@@ -10,31 +10,33 @@ import Marquee from './components/Marquee'
 import Snacks from './components/Snacks'
 import Footer from './components/ui/Footer'
 import BookingForm from './components/features/BookingForm'
-
+import Bubble from './components/ui/Bubble'
 
 
 const App = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const scrollRef = useRef();
+  const openForm = () => setIsOpen(true);
+  const closeForm = () => setIsOpen(false);
+
   useEffect(() => {
-  const scroll = new LocomotiveScroll();
-  return () => scroll.destroy();
-}, []);
+    scrollRef.current = new LocomotiveScroll({smooth: true});
 
-  const [isOpen, setIsOpen] = useState(false)
+    return () => scrollRef.current.destroy();
+  }, []);
 
-  const openForm = ()=> setIsOpen(true);
-  const closeForm = ()=> setIsOpen(false);
-  
   return (
-    <div className='max-w-600 mx-auto overflow-hidden relative'>    
-    <Navbar/>
-    <Hero openForm={openForm}/>
-    <Events/>  
-    <Games/>    
-    <CTA openForm={openForm}/> 
-    <Marquee/>
-    <Snacks openForm={openForm}/>
-    <Footer/>    
-    {isOpen && <BookingForm closeForm={closeForm}/>}
+    <div className='max-w-600 mx-auto overflow-hidden relative'>
+      <Navbar openForm={openForm} />
+      <Hero openForm={openForm} />
+      <Events />
+      <Games />
+      <CTA openForm={openForm} />
+      <Marquee />
+      <Snacks openForm={openForm} />
+      <Footer />
+      <Bubble />
+      {isOpen && <BookingForm closeForm={closeForm} />}
     </div>
   )
 }

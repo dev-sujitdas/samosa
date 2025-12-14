@@ -2,8 +2,13 @@ import React, { useState } from 'react'
 import Button from './ui/Button'
 import { FaChess } from "react-icons/fa";
 import { ImSpoonKnife } from "react-icons/im";
-import { useScroll, motion, resolveElements } from "motion/react"
-import BookingForm from './features/BookingForm';
+import { useScroll, motion } from "motion/react"
+import { div } from 'motion/react-client';
+// import BookingForm from './features/BookingForm';
+
+
+const text = "Every move comes with samosas.";
+
 
 
 const heroContent = [
@@ -29,12 +34,6 @@ const heroContent = [
         ),
     },
 ];
-
-const responsiveHeight = () => {
-    const width = window.innerWidth;
-    if (width >= 1290) return "18rem";
-    if (width >= 1024 && width < 1290) return "15rem";
-}
 
 const imgs = [
     { url: "/img1.jpg", size: "18vw", top: "5%", left: "50%", rotate: "0deg", isActive: false },
@@ -81,15 +80,45 @@ const Hero = ({ openForm }) => {
         }
     });
 
-    const openFormHandler = () => {
-        openForm();
-    }
+    const openFormHandler = () => openForm();
+
+    const letterVariant = {
+        hidden: {
+            opacity: 0,
+            y: 20           // start 20px below
+        },
+        visible: (i) => ({
+            opacity: 1,
+            y: 0,           // move up into place
+            transition: {
+                delay: i * 0.04, // stagger by index
+                duration: 0.4,
+                ease: "easeOut"
+            }
+        })
+    };
 
 
     return (
-        <section className='w-full h-screen p-5 md:p-12 2xl:p-14 color-primary flex flex-col justify-between relative'>
-            <div className='top lg:w-[70%] xl:w-[55%] flex justify-between mt-20'>
-                <h1 className='text-4xl lg:text-7xl xl:text-7xl 2xl:text-8xl poppins-bold text-[#F6A230] tracking-tighter'>Every move comes with samosas.</h1>
+        <section className='w-full h-screen p-5 md:p-12 2xl:p-14 color-primary flex flex-col justify-between relative'>          
+
+            <div className="hero-top w-full md:w-[80%] lg:w-[70%] xl:w-[55%] 2xl:w-[50%] flex mt-20">
+                <motion.h1
+                    initial="hidden"
+                    animate="visible"
+                    className="text-4xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl poppins-bold text-[#F6A230] tracking-tighter flex flex-wrap"
+                >
+                    {text.split("").map((char, i) => (
+                        <motion.span
+                            key={i}
+                            variants={letterVariant}
+                            custom={i}
+                            className="flex"
+                        >
+                            {char === " " ? "\u00A0" : char}
+                        </motion.span>
+                    ))}
+                </motion.h1>
             </div>
 
             <div className='middle w-full h-full relative hidden xl:block'>

@@ -1,5 +1,7 @@
-import React from 'react'
+import React, {useState, useEffect, useRef } from 'react'
+import { motion, useScroll, useInView } from "framer-motion";
 import Button from './ui/Button'
+import useCounter from './features/Counter';
 
 const marquees = [
     { url: "/img1.jpg", rotation: "", title: "", para: "" },
@@ -11,21 +13,37 @@ const marquees = [
     { url: "/img7.jpg", rotation: "", title: "", para: "" },
     { url: "/img8.jpg", rotation: "", title: "", para: "" },
 ];
-//bg-[#CA0000]
-const Events = () => {    
+
+const Events = () => {
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { amount: 0.4 });
+  const [startCount, setStartCount] = useState(false);
+
+  
+  const games = useCounter(startCount ? 50 : 0, 100, 10);
+  const tables = useCounter(startCount ? 0 : 0, 20, 20);
+  const players = useCounter(startCount ? 450 : 0, 500, 10);
+
+  
+  useEffect(() => {
+    if (isInView) {
+      setStartCount(true);
+    }
+  }, [isInView]);
+
 
     return (
         <section className='w-full h-full color-primary flex flex-col justify-between relative'>
             <div className='w-full mt-10 p-5 md:p-14'>
                 <h3 className='text-end text-sm md:text-xl uppercase poppins-bold tracking-tight text-[#FFCA15]'>Roll Dice, Break Snacks, Make Memories</h3>
-                <div className='w-full md:w-[85%] mt-5'>
+                <div className='w-full md:w-[85%] mt-10'>
                     <h2 className='text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl poppins-medium tracking-tighter text-white'>Serving Playful Bites and Playful Nights.</h2>
                 </div>
             </div>
             <div className='marquee_track flex flex-nowrap whitespace-nowrap will-change-transform'>
-                <div className='marquee_list flex whitespace-nowrap gap-10 mt-10 md:mt-20'>
+                <div className='marquee_list flex whitespace-nowrap gap-10 mt-10 md:mt-30'>
                     {[...marquees, ...marquees].map((image, index) => (
-                        <div key={index} className='w-70 md:w-80 h-100 md:h-120  shadow-md overflow-hidden rounded-2xl'>
+                        <div key={index} className='w-70 md:w-80 h-100 md:h-120 xl:w-100 xl:h-140  shadow-md overflow-hidden rounded-2xl'>
                             <img src={image.url} className='w-full h-full object-cover rounded-2xl hover:scale-110 duration-300' />
                         </div>
                     ))}
@@ -42,9 +60,9 @@ const Events = () => {
                             and served hundrards of plates of samosa. These numbers tell our story.</h4>
                     </div>
                 </div>
-                <div className='event-container w-full flex lg:flex-row flex-col justify-between gap-5 xl:gap-10 mt-20'>
+                <div ref={containerRef} className='event-container w-full flex lg:flex-row flex-col justify-between gap-5 xl:gap-10 mt-20'>
                     <div className='left lg:w-[28%] xl:w-[25%] h-58 lg:h-120 flex flex-col justify-between p-5 rounded-2xl border border-[#FFCA15] '>
-                        <h2 className='text-6xl md:text-7xl lg:text-6xl xl:text-8xl 2xl:text-9xl poppins-bold text-white tracking-tighter'>100+</h2>
+                        <h2 className='text-6xl md:text-7xl lg:text-6xl xl:text-8xl 2xl:text-9xl poppins-bold text-white tracking-tighter'>{games}+</h2>
                         <div>
                             <h3 className='text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl text-[#FFCA15] poppins-semibold tracking-tighter'>Games in stock</h3>
                             <p className='text-base 2xl:text-lg poppins-light text-amber-50 mt-2'>From rare finds to crowd favorites</p>
@@ -56,7 +74,7 @@ const Events = () => {
                                 <img src="/img4.jpg" className='w-full h-full object-cover rounded-2xl hover:scale-110 duration-300' />
                             </div>
                             <div className='content w-[49%] h-full flex flex-col justify-between p-5 rounded-2xl border border-[#FFCA15] '>
-                                <h2 className='text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl  poppins-bold text-white tracking-tighter'>20</h2>
+                                <h2 className='text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl  poppins-bold text-white tracking-tighter'>{tables}</h2>
                                 <div>
                                     <h3 className='text-2xl text-[#FFCA15] poppins-semibold tracking-tighter'>Tables ready</h3>
                                     <p className='text-base poppins-light text-amber-50 mt-2'>Waiting for your next game night</p>
@@ -77,7 +95,7 @@ const Events = () => {
 
                     </div>
                     <div className='right lg:w-[28%] xl:w-[25%] h-58 lg:h-120 flex flex-col justify-between p-5 rounded-2xl border border-[#FFCA15] '>
-                        <h2 className='text-6xl md:text-7xl lg:text-6xl xl:text-8xl 2xl:text-9xl  poppins-bold text-white tracking-tighter'>500+</h2>
+                        <h2 className='text-6xl md:text-7xl lg:text-6xl xl:text-8xl 2xl:text-9xl  poppins-bold text-white tracking-tighter'>{players}+</h2>
                         <div>
                             <h3 className='text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl text-[#FFCA15] poppins-semibold tracking-tighter'>Happy players</h3>
                             <p className='text-base 2xl:text-lg poppins-light text-amber-50 mt-2'>Who've made memories here</p>

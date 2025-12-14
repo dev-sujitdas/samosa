@@ -60,7 +60,7 @@ const Games = () => {
                 const yMove = useTransform(
                     scrollYProgress,
                     [0, 1],
-                    [0, -(index + 1) * 120] // more negative = moves upward faster
+                    [0, -(index + 1) * 120] 
                 );
 
                 return (
