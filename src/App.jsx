@@ -11,6 +11,9 @@ import Snacks from './components/Snacks'
 import Footer from './components/ui/Footer'
 import BookingForm from './components/features/BookingForm'
 import Bubble from './components/ui/Bubble'
+import { Route, Routes } from 'react-router-dom'
+import BoardGame from './pages/BoardGame'
+import ContactUs from './pages/ContactUS'
 
 
 const App = () => {
@@ -20,22 +23,30 @@ const App = () => {
   const closeForm = () => setIsOpen(false);
 
   useEffect(() => {
-    scrollRef.current = new LocomotiveScroll({smooth: true});
+    scrollRef.current = new LocomotiveScroll({ smooth: true });
 
     return () => scrollRef.current.destroy();
   }, []);
 
   return (
-    <div className='max-w-600 mx-auto overflow-hidden relative'>
+    <div >
       <Navbar openForm={openForm} />
-      <Hero openForm={openForm} />
-      <Events />
-      <Games />
-      <CTA openForm={openForm} />
-      <Marquee />
-      <Snacks openForm={openForm} />
+      <Routes>
+        <Route path='/' element={
+          <div className='max-w-600 mx-auto overflow-hidden relative'>
+            <Hero openForm={openForm} />
+            <Events />
+            <Games />
+            <CTA openForm={openForm} />
+            <Marquee />
+            <Snacks openForm={openForm} />
+            <Bubble />
+          </div>
+        } />
+        <Route path='/boardgame' element={<BoardGame />} />
+        <Route path='/contact' element={<ContactUs />} />
+      </Routes>
       <Footer />
-      <Bubble />
       {isOpen && <BookingForm closeForm={closeForm} />}
     </div>
   )

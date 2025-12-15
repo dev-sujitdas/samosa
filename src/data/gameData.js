@@ -1,5 +1,6 @@
 export const games = [
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/transforming-mars.webp",
     name: "Terraforming Mars",
     type: "Base",
@@ -9,6 +10,7 @@ export const games = [
     players: [1, 2, 3, 4, 5],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/catan.webp",
     name: "Catan",
     type: "Base",
@@ -18,6 +20,7 @@ export const games = [
     players: [3, 4, 5, 6],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/catan new.webp",
     name: "Catan New Energies",
     type: "Version",
@@ -27,6 +30,7 @@ export const games = [
     players: [3, 4],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/dune.webp",
     name: "Dune Imperium",
     type: "Base",
@@ -36,6 +40,7 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/powergrid.webp",
     name: "Power grid",
     type: "Base",
@@ -45,6 +50,7 @@ export const games = [
     players: [2, 3, 4, 5, 6],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/Splendour.webp",
     name: "Splendour",
     type: "Base",
@@ -54,6 +60,7 @@ export const games = [
     players: [2, 3, 4],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/Splendour expansions.webp",
     name: "Splendour expansions",
     type: "Expansion",
@@ -63,6 +70,7 @@ export const games = [
     players: [2, 3, 4],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/root.webp",
     name: "Root",
     type: "Base",
@@ -72,6 +80,7 @@ export const games = [
     players: [2, 3, 4],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/turing.webp",
     name: "Turing Machine",
     type: "Base",
@@ -81,6 +90,7 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/gallilio.webp",
     name: "Galileo Galilei",
     type: "Base",
@@ -90,6 +100,7 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/marie.webp",
     name: "Marie Curie",
     type: "Base",
@@ -99,6 +110,7 @@ export const games = [
     players: [2, 3, 4],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/wonders duel.webp",
     name: "7 wonders Duel",
     type: "Version",
@@ -108,6 +120,7 @@ export const games = [
     players: [2],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/deep sea.webp",
     name: "Deep Sea Adventure",
     type: "Base",
@@ -117,6 +130,7 @@ export const games = [
     players: [2, 3, 4, 5, 6],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/bandido.webp",
     name: "Bandido",
     type: "Version",
@@ -126,6 +140,7 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/sea salt.webp",
     name: "sea salt & paper",
     type: "Base",
@@ -135,6 +150,7 @@ export const games = [
     players: [2, 3, 4],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/extra salt.webp",
     name: "extra salt",
     type: "Expansion",
@@ -144,6 +160,7 @@ export const games = [
     players: [2, 3, 4, 5, 6],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/lama.webp",
     name: "Lama",
     type: "Base",
@@ -153,6 +170,7 @@ export const games = [
     players: [2, 3, 4, 5],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/up to.webp",
     name: "Up too high",
     type: "Base",
@@ -162,6 +180,7 @@ export const games = [
     players: [3, 4, 5, 6, 7],
   },
   {
+    default: "/game-icons/default.webp",
     icon: "/game-icons/startups.webp",
     name: "Startups",
     type: "Base",
@@ -171,7 +190,8 @@ export const games = [
     players: [2, 3, 4, 5],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/scout.webp",
     name: "Scout",
     type: "Base",
     difficulty: "Easy",
@@ -180,7 +200,8 @@ export const games = [
     players: [3, 4, 5, 6, 7, 8],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/fuji flush.webp",
     name: "Fuji Flush",
     type: "Base",
     difficulty: "Easy",
@@ -189,7 +210,8 @@ export const games = [
     players: [10, 2, 3, 4, 5, 6, 7, 8, 9],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/uno flip.webp",
     name: "Uno Flip",
     type: "Version",
     difficulty: "Easy",
@@ -198,7 +220,8 @@ export const games = [
     players: [10, 2, 3, 4, 5, 6, 7, 8, 9],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/uno.webp",
     name: "Uno",
     type: "Base",
     difficulty: "Easy",
@@ -207,7 +230,8 @@ export const games = [
     players: [2, 3, 4, 5, 6],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/double.webp",
     name: "Double",
     type: "Version",
     difficulty: "Easy",
@@ -216,7 +240,8 @@ export const games = [
     players: [2, 3, 4, 5],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/qwixx.webp",
     name: "Qwixx",
     type: "Base",
     difficulty: "Easy",
@@ -225,7 +250,8 @@ export const games = [
     players: [10, 5, 6, 7, 8, 9],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/fake artist.webp",
     name: "Fake Artist goes to New York",
     type: "Base",
     difficulty: "Easy",
@@ -234,7 +260,8 @@ export const games = [
     players: [4, 5, 6, 7, 8],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/insider.webp",
     name: "Insider",
     type: "Base",
     difficulty: "Easy",
@@ -243,7 +270,8 @@ export const games = [
     players: [10, 2, 3, 4, 5, 6, 7, 8, 9],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/hey yo.webp",
     name: "Hey Yo",
     type: "Base",
     difficulty: "",
@@ -252,7 +280,8 @@ export const games = [
     players: [3, 4, 5, 6, 7],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/rights.webp",
     name: "Rights",
     type: "Base",
     difficulty: "Easy",
@@ -261,7 +290,8 @@ export const games = [
     players: [2, 3, 4, 5, 6],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/beverbende.webp",
     name: "Beverbende",
     type: "Version",
     difficulty: "Easy",
@@ -270,7 +300,8 @@ export const games = [
     players: [2, 3, 4, 5],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/",
     name: "Afzaker",
     type: "Base",
     difficulty: "Easy",
@@ -279,7 +310,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/catan dice.webp",
     name: "Catan Dice play",
     type: "Base",
     difficulty: "",
@@ -288,7 +320,8 @@ export const games = [
     players: [2, 3, 4, 5],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/dirt.webp",
     name: "Dirt and Glory",
     type: "Base",
     difficulty: "Easy",
@@ -297,7 +330,8 @@ export const games = [
     players: [3, 4, 5, 6],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/pot.webp",
     name: "Pot de Vin",
     type: "Base",
     difficulty: "Easy",
@@ -306,7 +340,8 @@ export const games = [
     players: [2, 3],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/bus.webp",
     name: "Bus",
     type: "Base",
     difficulty: "Expert",
@@ -315,7 +350,8 @@ export const games = [
     players: [2],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/hive.webp",
     name: "Hive",
     type: "Base",
     difficulty: "Easy",
@@ -324,7 +360,8 @@ export const games = [
     players: [2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/rummikub.webp",
     name: "Rummikub",
     type: "Version",
     difficulty: "Medium",
@@ -333,7 +370,8 @@ export const games = [
     players: [2],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/cleocatra.webp",
     name: "Cleocatra",
     type: "Base",
     difficulty: "Expert",
@@ -342,7 +380,8 @@ export const games = [
     players: [2, 3, 4, 5],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/sky team.webp",
     name: "Sky Team",
     type: "Base",
     difficulty: "Expert",
@@ -351,7 +390,8 @@ export const games = [
     players: [2, 3, 4, 5],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/century spice.webp",
     name: "Century Spice",
     type: "Base",
     difficulty: "Expert",
@@ -360,7 +400,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/pandemic Iberia.webp",
     name: "Pandemic Iberia",
     type: "Version",
     difficulty: "Expert",
@@ -369,7 +410,8 @@ export const games = [
     players: [2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/darwin journey.webp",
     name: "Darwin’s Journey",
     type: "Base",
     difficulty: "Expert",
@@ -378,7 +420,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/alchemists.webp",
     name: "Alchemists",
     type: "Base",
     difficulty: "Expert",
@@ -387,7 +430,8 @@ export const games = [
     players: [2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/darwin fireland.webp",
     name: "Darwin’s Journey Expansion: Fireland",
     type: "Base",
     difficulty: "Easy",
@@ -396,7 +440,8 @@ export const games = [
     players: [2],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/king golem.webp",
     name: "Alchemist Expansion: King’s Golem",
     type: "Version",
     difficulty: "Easy",
@@ -405,7 +450,8 @@ export const games = [
     players: [4, 5, 6, 7],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/lost cities.webp",
     name: "Lost Cities",
     type: "Base",
     difficulty: "Expert",
@@ -414,7 +460,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/bang.webp",
     name: "Bang",
     type: "Base",
     difficulty: "Expert",
@@ -423,7 +470,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/epic tactics.webp",
     name: "Epic Tactics",
     type: "Base",
     difficulty: "Expert",
@@ -432,7 +480,8 @@ export const games = [
     players: [2, 3, 4, 5, 6],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/root.webp",
     name: "Root: The Clockwork Expansion",
     type: "Base",
     difficulty: "Expert",
@@ -441,7 +490,8 @@ export const games = [
     players: [2, 3, 4, 5, 6],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/power grid.webp",
     name: "Power grid Expansion: China/Korea",
     type: "Base",
     difficulty: "Expert",
@@ -450,7 +500,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/powergrid.webp",
     name: "Power grid Expansion: Middle East/South Africa",
     type: "Version",
     difficulty: "Easy",
@@ -459,7 +510,8 @@ export const games = [
     players: [2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/ark nova.webp",
     name: "Ark Nova",
     type: "Base",
     difficulty: "Medium",
@@ -468,7 +520,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/kingdomino.webp",
     name: "Kingdomino",
     type: "Base",
     difficulty: "Medium",
@@ -477,7 +530,8 @@ export const games = [
     players: [2],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/cascadia.webp",
     name: "Cascadia",
     type: "Base",
     difficulty: "Medium",
@@ -486,7 +540,8 @@ export const games = [
     players: [2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/bread.webp",
     name: "Bread and bier",
     type: "Base",
     difficulty: "Expert",
@@ -495,7 +550,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/azul mini.webp",
     name: "Azul mini",
     type: "Base",
     difficulty: "Expert",
@@ -504,7 +560,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/dune.webp",
     name: "Dune Imperium: Immortality",
     type: "Expansion",
     difficulty: "Medium",
@@ -513,7 +570,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/dune.webp",
     name: "Dune Imperium: Rise of Ix",
     type: "Expansion",
     difficulty: "Easy",
@@ -522,7 +580,8 @@ export const games = [
     players: [2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/lord ring.webp",
     name: "Lord of the rings trick taking",
     type: "Base",
     difficulty: "Expert",
@@ -531,7 +590,8 @@ export const games = [
     players: [2, 3, 4, 5],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/rumble nation.webp",
     name: "Rumble nation ",
     type: "Base",
     difficulty: "Expert",
@@ -540,7 +600,8 @@ export const games = [
     players: [2, 3, 4, 5],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/concordia.webp",
     name: "Concordia",
     type: "Base",
     difficulty: "Expert",
@@ -549,7 +610,8 @@ export const games = [
     players: [2, 3, 4, 5, 6],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/pixies.webp",
     name: "Pixies",
     type: "Base",
     difficulty: "Expert",
@@ -558,7 +620,8 @@ export const games = [
     players: [2, 3, 4, 5, 6],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/yokai pagoda.webp",
     name: "Yokai Pagoda",
     type: "Version",
     difficulty: "Easy",
@@ -567,7 +630,8 @@ export const games = [
     players: [2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/public enemy.webp",
     name: "public enemy number one",
     type: "Base",
     difficulty: "Easy",
@@ -576,7 +640,8 @@ export const games = [
     players: [2, 3, 4, 5, 6],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/japan.webp",
     name: "Let’s go to Japan",
     type: "Base",
     difficulty: "Expert",
@@ -585,7 +650,8 @@ export const games = [
     players: [2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/6 language.webp",
     name: "I speak 6 languages",
     type: "Base",
     difficulty: "Expert",
@@ -594,7 +660,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/pandemic legacy.webp",
     name: "Pandemic legacy season 0",
     type: "Base",
     difficulty: "Easy",
@@ -603,7 +670,8 @@ export const games = [
     players: [2, 3, 4, 5, 6, 7, 8],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/tycoon.webp",
     name: "Tycoon: India 1981",
     type: "Base",
     difficulty: "",
@@ -612,7 +680,8 @@ export const games = [
     players: [2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/tacta.webp",
     name: "Tacta",
     type: "Expansion",
     difficulty: "Medium",
@@ -621,7 +690,8 @@ export const games = [
     players: [2],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/lumina spell.webp",
     name: "Lumina Spell",
     type: "Expansion",
     difficulty: "Medium",
@@ -630,7 +700,8 @@ export const games = [
     players: [2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/tag team.webp",
     name: "Tag Team",
     type: "Base",
     difficulty: "Medium",
@@ -639,7 +710,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/eternity.webp",
     name: "The vale of eternity",
     type: "Base",
     difficulty: "Medium",
@@ -648,7 +720,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/knitting circle.webp",
     name: "Knitting circle",
     type: "Base",
     difficulty: "Expert",
@@ -657,7 +730,8 @@ export const games = [
     players: [1, 2, 3, 4, 5],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/terraforming mars.webp",
     name: "Terraforming Mars: Ares Expedition",
     type: "Version",
     difficulty: "Expert",
@@ -666,7 +740,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/agricola.webp",
     name: "Agricola",
     type: "Base",
     difficulty: "Expert",
@@ -675,7 +750,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/automa.webp",
     name: "Terraforming Mars: Automa",
     type: "Base",
     difficulty: "Expert",
@@ -684,7 +760,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/turmoil.webp",
     name: "Terraforming Mars: turmoil",
     type: "Base",
     difficulty: "Easy",
@@ -693,7 +770,8 @@ export const games = [
     players: [3, 4, 5],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/prelude.webp",
     name: "Terraforming Mars: Prelude",
     type: "Version",
     difficulty: "Medium",
@@ -702,7 +780,8 @@ export const games = [
     players: [3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/fearless.webp",
     name: "Fearless",
     type: "Base",
     difficulty: "Expert",
@@ -711,7 +790,8 @@ export const games = [
     players: [2],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/bid coin.webp",
     name: "Bid coin",
     type: "Base",
     difficulty: "Medium",
@@ -720,7 +800,8 @@ export const games = [
     players: [1, 2, 3, 4, 5],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/star realms.webp",
     name: "Star realms: Frontiers",
     type: "Expansion",
     difficulty: "Medium",
@@ -729,7 +810,8 @@ export const games = [
     players: [2],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/108 outlaws.webp",
     name: "108 outlaws",
     type: "Expansion",
     difficulty: "Easy",
@@ -738,7 +820,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/splendor duel.webp",
     name: "Splendor: Duel",
     type: "Expansion",
     difficulty: "Easy",
@@ -747,7 +830,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/for northwood.webp",
     name: "For northwood",
     type: "Base",
     difficulty: "Easy",
@@ -756,7 +840,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/halli galli.webp",
     name: "Halli Galli",
     type: "Base",
     difficulty: "Easy",
@@ -765,7 +850,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/jekyll.webp",
     name: "Jekyll & Hyde",
     type: "Base",
     difficulty: "Easy",
@@ -774,7 +860,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/kingdom legacy.webp",
     name: "Kingdom Legacy: Feudal Kingdoms",
     type: "Expansion",
     difficulty: "Easy",
@@ -783,7 +870,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/distant lands.webp",
     name: "Kingdom Legacy: Distant Lands",
     type: "Expansion",
     difficulty: "Easy",
@@ -792,7 +880,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/gloomhaven.webp",
     name: "Gloomhaven : Buttons and Bugs",
     type: "Base",
     difficulty: "Easy",
@@ -801,7 +890,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/feudal foundation.webp",
     name: "Kingdom Legacy: Feudal Kingdoms Foundations",
     type: "Base",
     difficulty: "Easy",
@@ -810,7 +900,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/bluff it.webp",
     name: "Bluff It",
     type: "Base",
     difficulty: "Easy",
@@ -819,7 +910,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/eldorado.webp",
     name: "The Quest for El dorado",
     type: "Version",
     difficulty: "Easy",
@@ -828,7 +920,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/robotrick.webp",
     name: "Robotrick",
     type: "Base",
     difficulty: "Easy",
@@ -837,7 +930,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/ridding woods.webp",
     name: "Kingdom Legacy: Ridding the Woods",
     type: "Base",
     difficulty: "Easy",
@@ -846,7 +940,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/ambition.webp",
     name: "Kingdom Legacy: Ambitions",
     type: "Base",
     difficulty: "Easy",
@@ -855,7 +950,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/adventure.webp",
     name: "Kingdom Legacy: Adventures",
     type: "Expansion",
     difficulty: "Easy",
@@ -864,7 +960,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/merchant.webp",
     name: "Kingdom Legacy: Merchants",
     type: "Base",
     difficulty: "Easy",
@@ -873,7 +970,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/fishing lessons.webp",
     name: "Fishing lessons",
     type: "Base",
     difficulty: "Easy",
@@ -882,7 +980,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/fishing expansion.webp",
     name: "Fishing lessons expansion",
     type: "Base",
     difficulty: "Easy",
@@ -891,7 +990,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/unsurmountable.webp",
     name: "unsurmountable",
     type: "Expansion",
     difficulty: "Easy",
@@ -900,7 +1000,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/unsurmountable expansion.webp",
     name: "unsurmountable expansion",
     type: "Base",
     difficulty: "Easy",
@@ -909,7 +1010,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/hyperstar run.webp",
     name: "Hyperstar Run",
     type: "Base",
     difficulty: "Easy",
@@ -918,7 +1020,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/hyperstar equipment.webp",
     name: "Hyperstar Run Equipment Drop",
     type: "Expansion",
     difficulty: "Easy",
@@ -927,7 +1030,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/hyperstar final.webp",
     name: "Hyperstar Run Final Bosses",
     type: "Base",
     difficulty: "Easy",
@@ -936,7 +1040,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/royal.webp",
     name: "The Royal Limited",
     type: "Expansion",
     difficulty: "Easy",
@@ -945,7 +1050,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/ugly.webp",
     name: "ugly Gryphon Inn",
     type: "Base",
     difficulty: "Easy",
@@ -954,7 +1060,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/ugly expansion.webp",
     name: "ugly Gryphon Inn expansion",
     type: "Expansion",
     difficulty: "Easy",
@@ -963,7 +1070,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/ancient realm.webp",
     name: "Ancient realm",
     type: "Base",
     difficulty: "Base",
@@ -972,7 +1080,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/sprawlopolis.webp",
     name: "Sprawlopolis",
     type: "Sprawlopolis",
     difficulty: "Easy",
@@ -981,7 +1090,8 @@ export const games = [
     players: [1],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/agropolis.webp",
     name: "Agropolis: Sprawlopolis",
     type: "Agropolis: Sprawlopolis",
     difficulty: "Easy",
@@ -990,7 +1100,8 @@ export const games = [
     players: [1, 2, 3, 4],
   },
   {
-    icon: "",
+    default: "/game-icons/default.webp",
+    icon: "/game-icons/mysticana.webp",
     name: "Mysticana",
     type: "Mysticana",
     difficulty: "Easy",

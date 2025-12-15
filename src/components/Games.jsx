@@ -144,7 +144,7 @@ const Games = () => {
                     ))}
                 </div>
 
-                <Button text={"Browse more"} color={"#F6A230"} textColor={"#000"} />
+                <Button text={"Browse more"} color={"#F6A230"} textColor={"#000"} link="/boardgame" />
             </div>
         </section>
     );

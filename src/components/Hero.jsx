@@ -100,7 +100,7 @@ const Hero = ({ openForm }) => {
 
 
     return (
-        <section className='w-full h-screen p-5 md:p-12 2xl:p-14 color-primary flex flex-col justify-between relative'>          
+        <section className='w-full h-dvh md:h-screen p-5 md:p-12 2xl:p-14 color-primary flex flex-col justify-between relative'>          
 
             <div className="hero-top w-full md:w-[80%] lg:w-[70%] xl:w-[55%] 2xl:w-[50%] flex mt-20">
                 <motion.h1
