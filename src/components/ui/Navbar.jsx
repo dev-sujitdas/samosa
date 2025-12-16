@@ -4,7 +4,7 @@ import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import BoardGame from '../../pages/BoardGame';
-import ContactUs from '../../pages/ContactUS';
+import ContactUs from '../../pages/Contact';
 
 
 const Navbar = ({ openForm }) => {
@@ -14,7 +14,7 @@ const Navbar = ({ openForm }) => {
   { label: "Book Table", type: "action", onClick: openForm },
   { label: "Our Games", type: "route", to: "/boardgame" },
   { label: "Our Menus", type: "ahref", target: "menus" },
-  { label: "Contact Us", type: "route", to: "/contactUs" },
+  { label: "Contact Us", type: "route", to: "/contact" },
 ];
 
 

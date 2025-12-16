@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ContactUs = () => {
+const Contact = () => {
   return (
     <div className='w-full min-h-screen'>ContactUs</div>
   )
 }
 
-export default ContactUs
+export default Contact
