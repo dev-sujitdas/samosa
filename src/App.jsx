@@ -13,7 +13,7 @@ import BookingForm from './components/features/BookingForm'
 import Bubble from './components/ui/Bubble'
 import { Link, Route, Routes } from 'react-router-dom'
 import BoardGame from './pages/BoardGame'
-import ContactUs from './pages/ContactUS'
+// import ContactUs from './pages/ContactUS'
 
 
 const App = () => {
@@ -44,7 +44,7 @@ const App = () => {
           </div>
         } />
         <Route path='/boardgame' element={<BoardGame />} />        
-        <Route path='/contact' element={<ContactUs />} />
+        {/* <Route path='/contact' element={<ContactUs />} /> */}
       </Routes>
       <Footer />
       {isOpen && <BookingForm closeForm={closeForm} />}
