@@ -13,7 +13,7 @@ const Navbar = ({ openForm }) => {
  const menus = [
   { label: "Book Table", type: "action", onClick: openForm },
   { label: "Our Games", type: "route", to: "/boardgame" },
-  { label: "Our Menus", type: "scroll", target: "menus" },
+  { label: "Our Menus", type: "ahref", target: "menus" },
   { label: "Contact Us", type: "route", to: "/contact" },
 ];
 

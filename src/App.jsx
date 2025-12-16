@@ -11,7 +11,7 @@ import Snacks from './components/Snacks'
 import Footer from './components/ui/Footer'
 import BookingForm from './components/features/BookingForm'
 import Bubble from './components/ui/Bubble'
-import { Route, Routes } from 'react-router-dom'
+import { Link, Route, Routes } from 'react-router-dom'
 import BoardGame from './pages/BoardGame'
 import ContactUs from './pages/ContactUS'
 
@@ -43,7 +43,7 @@ const App = () => {
             <Bubble />
           </div>
         } />
-        <Route path='/boardgame' element={<BoardGame />} />
+        <Route path='/boardgame' element={<BoardGame />} />        
         <Route path='/contact' element={<ContactUs />} />
       </Routes>
       <Footer />
