@@ -24,19 +24,19 @@ const BookingForm = ({ closeForm }) => {
     // fetch("/api/bookings", { method: "POST", body: JSON.stringify(formData) })
 
     alert("Booking request submitted!");
-    setFormData({ 
-      name: "", 
-      email: "", 
-      players: "", 
-      date: "", 
-      time: "", 
-      notes: "" 
+    setFormData({
+      name: "",
+      email: "",
+      players: "",
+      date: "",
+      time: "",
+      notes: ""
     });
   };
 
   return (
-    <section className='fixed top-0  w-full h-screen flex justify-center items-center z-999 bg-[#31303054] backdrop-blur-md p-20'>
-      <button onClick={closeForm} className='rounded-full p-2 bg-white text-black font-bold absolute -right-3 -top-4 text-xl shadow-lg hover:scale-105 cursor-pointer'><IoClose /></button>
+    <section className='fixed top-0  w-full h-dvh flex justify-center items-center z-999 bg-[#31303054] backdrop-blur-md '>
+      {/* <button onClick={closeForm} className='rounded-full p-2 bg-white text-black font-bold absolute -right-3 -top-4 text-xl shadow-lg hover:scale-105 cursor-pointer'><IoClose /></button> */}
       {/* <div className='w-fit h-fit flex flex-col justify-center items-center relative'>
       <button onClick={closeForm} className='rounded-full p-2 bg-white text-black font-bold absolute -right-3 -top-4 text-xl shadow-lg hover:scale-105 cursor-pointer'><IoClose /></button>
         <form
@@ -131,13 +131,15 @@ const BookingForm = ({ closeForm }) => {
           </button>
         </form>
       </div> */}
-  
 
-      <iframe
-        src="https://gravityglobal.odoo.com/book/table"        
-        style={{ width: '100%', height: '100vh', border: 0, borderRadius: "50px" }}
-      />
-  
+      <div className='w-full h-full flex flex-col justify-center items-center relative'>
+        <button onClick={closeForm} className='rounded-full p-2 bg-white text-black font-bold absolute right-3 top-2 text-xl shadow-lg hover:scale-105 cursor-pointer'><IoClose /></button>
+        <iframe
+          src="https://samosa.odoo.com/book/book-a-table"
+          style={{ width: '100%', height: '100vh', border: 0 }}
+        />
+      </div>
+
 
     </section>
   )

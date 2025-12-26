@@ -29,7 +29,7 @@ const BoardGame = () => {
         <h2 className='text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl poppins-medium tracking-tighter text-white'>Our Games</h2>
       </div>
       <div className='w-full lg:w-[80%] flex flex-start mt-10'>
-        <h3 className='text-zinc-400 text-xl underline poppins-regular'><span onClick={handleNavigate} className='text-blue-300 cursor-pointer'>Home</span>/Boardgame</h3>
+        <h3 className='text-zinc-400 text-xl poppins-regular'><span onClick={handleNavigate} className='text-[#F6A230] cursor-pointer'>Home</span>/Boardgame</h3>
       </div>
       <div className='w-full lg:w-[80%] mx-auto h-full flex flex-wrap justify-center gap-10  mt-10'>
         {games.map((g, i) => (
