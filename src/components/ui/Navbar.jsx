@@ -31,7 +31,7 @@ const Navbar = ({ openForm }) => {
   };
 
   return (
-    <nav className='navbar w-full fixed top-0 z-999 overflow-hidden'>
+    <nav className='navbar w-full fixed top-0 z-999'>
       <div className='w-full max-w-600 mx-auto px-5 md:px-12 lg:px-16  bg-[#2f4a2c52] backdrop-blur-2xl relative'>
         <div className='flex justify-between items-center border-b py-4 border-[#16a1557e] '>
           <div><a href="/"><img className='h-10 lg:h-16 width-fit' src="/logo2-bg.png" alt="" /></a></div>
