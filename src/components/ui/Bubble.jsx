@@ -28,8 +28,8 @@ const Bubble = () => {
     <>
       {isInView && (
         <div onClick={scrollToTop}>
-          <div className='fixed bottom-5 right-5 flex justify-center items-center w-16 h-16 rounded-full bg-white cursor-pointer z-999 shadow-xl hover:scale-105 duration-300'>
-            <h2 className='text-4xl'>
+          <div className='fixed bottom-5 right-5 flex justify-center items-center w-10 h-10  md:w-16 md:h-16 rounded-full bg-white cursor-pointer z-999 shadow-xl hover:scale-105 duration-300'>
+            <h2 className='text-2xl md:text-4xl'>
               <FaArrowUp />
             </h2>
           </div>

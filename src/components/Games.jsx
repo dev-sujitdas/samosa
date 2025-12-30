@@ -105,7 +105,7 @@ const Games = () => {
                     </p>
                 </div>
 
-                <div className='absolute left-15 top-[70%] h-52 w-52 opacity-10 rotate-45'>
+                <div className='absolute left-15 top-[70%] h-52 w-52 opacity-10 rotate-45 md:block hidden'>
                     <FaDiceFive className='w-full h-full' />
                 </div>
                 <div className='absolute right-20 top-[10%] h-96 w-96 opacity-10 -rotate-45'>

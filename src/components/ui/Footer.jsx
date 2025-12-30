@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Footer = () => {
+const Footer = ({openForm}) => {
   return (
-    <footer className="w-full color-primary relative  border-t border-[#E8BD2D]">
+    <footer className="w-full color-primary relative  border-t border-[#E8BD2D] overflow-hidden">
       <div className="w-full flex lg:flex-row flex-col md:p-5 lg:px-14 py-7 ">
         <div className="lg:w-1/2 w-full py-5 px-5 lg:px-0 z-10">
           <div className="flex  items-center gap-2">
-            <img src="/logo2.png" className='h-20 w-fit' />
+            <img src="/logo2.png" className='h-20 width-fit' />
           </div>
           <div className="mt-8 flex gap-5">
             <a href="https://www.facebook.com/qeske.maastricht/">
@@ -35,10 +35,10 @@ const Footer = () => {
               EXPLORE
             </h2>
             <div className='space-y-2'>
-            <h3 className="text-zinc-200 poppins-medium">Book Table</h3>
-            <h3 className="text-zinc-200 poppins-medium">Our Games</h3>
-            <h3 className="text-zinc-200 poppins-medium">Our Menus</h3>
-            <h3 className="text-zinc-200 poppins-medium">Contact Us</h3>
+            <h3 onClick={openForm} className="text-zinc-200 poppins-medium cursor-pointer">Book Table</h3>
+            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Our Games</h3>
+            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Our Menus</h3>
+            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Contact Us</h3>
             </div>
           </div>
           <div className="">
@@ -46,9 +46,9 @@ const Footer = () => {
               CONNECT
             </h2>
             <div className='space-y-2'>
-            <h3 className="text-zinc-200 poppins-medium">Instagram</h3>
-            <h3 className="text-zinc-200 poppins-medium">Facebook</h3>
-            <h3 className="text-zinc-200 poppins-medium">Twiter</h3>
+            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Instagram</h3>
+            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Facebook</h3>
+            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Twiter</h3>
             
             </div>
           </div>
@@ -57,9 +57,9 @@ const Footer = () => {
               SUPPORT
             </h2>
             <div className='space-y-2'>
-            <h3 className="text-zinc-200 poppins-medium">Get in touch</h3>
-            <h3 className="text-zinc-200 poppins-medium">Reservations</h3>
-            <h3 className="text-zinc-200 poppins-medium">Help center</h3>
+            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Get in touch</h3>
+            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Reservations</h3>
+            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Help center</h3>
             
             </div>
           </div>

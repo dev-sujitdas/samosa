@@ -29,7 +29,7 @@ const App = () => {
   }, []);
 
   return (
-    <div >
+    <div>
       <Navbar openForm={openForm} />
       <Routes>
         <Route path='/' element={
@@ -46,7 +46,7 @@ const App = () => {
         <Route path='/boardgame' element={<BoardGame />} />        
         <Route path='/contact' element={<Contact />} />
       </Routes>
-      <Footer />
+      <Footer openForm={openForm} />
       {isOpen && <BookingForm closeForm={closeForm} />}
     </div>
   )
