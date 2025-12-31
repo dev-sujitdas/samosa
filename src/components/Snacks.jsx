@@ -11,7 +11,7 @@ import {
 import Button from "./ui/Button";
 
 const floatImages = [
-  { url: "/float-images/french-fries.png", top: "10%", left: "15%", size: "20VW", rotation: "-20deg" },
+  { url: "/float-images/bowl.png", top: "12%", left: "15%", size: "15VW", rotation: "-20deg" },
   { url: "/float-images/samosa.png", top: "10%", left: "70%", size: "25VW", rotation: "40deg" },
   { url: "/float-images/samosa.png", top: "50%", left: "5%", size: "20VW", rotation: "-20deg" },
   { url: "/float-images/drink.png", top: "70%", left: "75%", size: "32VW", rotation: "5deg" },
