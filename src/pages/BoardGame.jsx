@@ -67,7 +67,7 @@ const matchPlayer = (gamePlayers, selectedPlayer) => {
       <div className='w-full lg:w-[80%] flex flex-col md:flex-row justify-between mt-10'>
         <h3 className='text-zinc-400 text-xl poppins-regular'><span onClick={handleNavigate} className='text-[#F6A230] cursor-pointer'>Home</span>/Boardgame</h3>
 
-        <div className='flex gap-5 mt-5 md:mt-0'>
+        <div className='flex flex-wrap gap-5 mt-5 md:mt-0'>
           <select
             value={player}
             onChange={(e) => setPlayer(e.target.value)}
