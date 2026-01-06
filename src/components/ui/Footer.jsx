@@ -49,9 +49,11 @@ const Footer = ({openForm}) => {
               CONNECT
             </h2>
             <div className='space-y-2'>
-            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Instagram</h3>
-            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Facebook</h3>
-            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Twiter</h3>
+              <a href="https://www.instagram.com/samosa_maastricht?igsh=MTFzbjFrZHQwczZudw==" target='_blank'>
+              <h3 className="text-zinc-200 poppins-medium cursor-pointer">Instagram</h3>
+              </a>
+            {/* <h3 className="text-zinc-200 poppins-medium cursor-pointer">Facebook</h3>
+            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Twiter</h3> */}
             
             </div>
           </div>
@@ -60,7 +62,10 @@ const Footer = ({openForm}) => {
               SUPPORT
             </h2>
             <div className='space-y-2'>
-            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Get in touch</h3>
+              
+            <h3 className="text-zinc-200 poppins-medium cursor-pointer">
+              <a href="mailto:ndn.foods.maastricht@gmail.com">Get in touch</a>
+            </h3>
             <h3 className="text-zinc-200 poppins-medium cursor-pointer">Reservations</h3>
             <h3 className="text-zinc-200 poppins-medium cursor-pointer">Help center</h3>
             
