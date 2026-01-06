@@ -827,7 +827,7 @@ export const games = [
     difficulty: "Easy",
     duration: "<30",
     tags: ["card game", "memory", "strategy"],
-    players: [1],
+    players: [2],
   },
   {
     default: "/game-icons/default.webp",

@@ -46,29 +46,29 @@ const BoardGame = () => {
     return gameDurationValue === selectedDuration;
   };
 
-const matchPlayer = (gamePlayers, selectedPlayer) => {
-  if (selectedPlayer === "all") return true;
+  const matchPlayer = (gamePlayers, selectedPlayer) => {
+    if (selectedPlayer === "all") return true;
 
-  const [selectedMin, selectedMax] = selectedPlayer.split("-").map(Number);
+    const [selectedMin, selectedMax] = selectedPlayer.split("-").map(Number);
 
-  const gameMin = Math.min(...gamePlayers);
-  const gameMax = Math.max(...gamePlayers);
-  
-  if(gameMin === 1 && gameMax === 1){
-    return gameMin === selectedMin && gameMax === selectedMax
-  }
-  if(gameMin === 2 && gameMax === 2){
-    return gameMin === selectedMin && gameMax === selectedMax
-  }
-  if(gameMin === 2 && gameMax === 3){
-    return gameMin === selectedMin && gameMax === selectedMax
-  }
-  if(gameMin === 1 && gameMax === 4){
-    return gameMin === selectedMin && gameMax === selectedMax
-  }
-  
-  return gameMin >= selectedMin && gameMax <= selectedMax;  
-};
+    const gameMin = Math.min(...gamePlayers);
+    const gameMax = Math.max(...gamePlayers);
+
+    // if (gameMin === 1 && gameMax === 1) {
+    //   return gameMin === selectedMin && gameMax === selectedMax
+    // }
+    // if (gameMin === 2 && gameMax >= 3) {
+    //   return gameMin === selectedMin && gameMax === selectedMax
+    // }
+    // if (gameMin >= 2 && gameMax >= 3) {
+    //   return gameMin === selectedMin && gameMax === selectedMax
+    // }
+    // if (gameMin === 1 && gameMax === 4) {
+    //   return gameMin === selectedMin && gameMax === selectedMax
+    // }
+
+    return gameMin >= selectedMin && gameMax <= selectedMax;
+  };
 
 
   return (
@@ -89,8 +89,8 @@ const matchPlayer = (gamePlayers, selectedPlayer) => {
             <option value="" disabled>Player</option>
             <option value="all">All</option>
             <option value="1-1">1</option>
-            <option value="2-2">2</option>
-            <option value="2-3">3</option>
+            <option value="2-3">2</option>
+            <option value="3-6">3</option>
             <option value="1-4">4</option>
             <option value="1-9">4+</option>
           </select>
@@ -150,7 +150,11 @@ const matchPlayer = (gamePlayers, selectedPlayer) => {
               <div className="flex items-center justify-between">
                 <div id="player" className="w-1/3 flex justify-center items-center gap-1 border-r border-zinc-300 ">
                   <HiMiniUsers className="text-zinc-600" />
-                  <span>{g.players[0]} - {g.players[g.players.length - 1]}</span>
+                  <span>
+                    {g.players[0]}
+                    {g.players.length > 1 && ` - ${g.players[g.players.length - 1]}`}
+                  </span>
+
                 </div>
                 <div id="duration" className="w-1/3 flex justify-center items-center gap-1 border-r border-zinc-300 ">
                   <RxLapTimer className="text-zinc-600" />
