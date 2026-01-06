@@ -20,6 +20,7 @@ const BoardGame = () => {
       case "easy": return 1;
       case "medium": return 2;
       case "expert": return 3;
+
       default: return 0;
     }
   };
@@ -68,7 +69,6 @@ const matchPlayer = (gamePlayers, selectedPlayer) => {
   
   return gameMin >= selectedMin && gameMax <= selectedMax;  
 };
-
 
 
   return (
