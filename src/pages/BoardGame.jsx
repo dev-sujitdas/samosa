@@ -53,7 +53,20 @@ const matchPlayer = (gamePlayers, selectedPlayer) => {
   const gameMin = Math.min(...gamePlayers);
   const gameMax = Math.max(...gamePlayers);
   
-  return gameMin >= selectedMin && gameMax <= selectedMax;
+  if(gameMin === 1 && gameMax === 1){
+    return gameMin === selectedMin && gameMax === selectedMax
+  }
+  if(gameMin === 2 && gameMax === 2){
+    return gameMin === selectedMin && gameMax === selectedMax
+  }
+  if(gameMin === 2 && gameMax === 3){
+    return gameMin === selectedMin && gameMax === selectedMax
+  }
+  if(gameMin === 1 && gameMax === 4){
+    return gameMin === selectedMin && gameMax === selectedMax
+  }
+  
+  return gameMin >= selectedMin && gameMax <= selectedMax;  
 };
 
 
@@ -77,9 +90,9 @@ const matchPlayer = (gamePlayers, selectedPlayer) => {
             <option value="all">All</option>
             <option value="1-1">1</option>
             <option value="2-2">2</option>
-            <option value="1-5">1 - 5</option>
-            <option value="1-6">1 - 6</option>
-            <option value="1-9">1 - 9</option>
+            <option value="2-3">3</option>
+            <option value="1-4">4</option>
+            <option value="1-9">4+</option>
           </select>
 
           <select
