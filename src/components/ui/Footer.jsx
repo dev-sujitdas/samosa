@@ -8,7 +8,7 @@ const Footer = ({openForm}) => {
       <div className="w-full flex lg:flex-row flex-col md:p-5 lg:px-14 py-7 ">
         <div className="lg:w-1/2 w-full py-5 px-5 lg:px-0 z-10">
           <div className="flex  items-center gap-2">
-            <img src="/logo2.png" className='h-20 width-fit' />
+            <img src="/logo2.png" className='h-16 w-42 md:h-20 md:w-52' />
           </div>
           <div className="mt-8 flex gap-5">
             <a href="https://www.facebook.com/qeske.maastricht/">
