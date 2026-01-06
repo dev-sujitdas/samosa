@@ -253,5 +253,11 @@
   .event-container .middle .content{
     width: 100%;
   }
+  .game-list #player span, #duration span, #stars .star{
+    font-size: 0.75rem;
+  }
+  .game-list{
+    padding: 0;
+  }
 }
 

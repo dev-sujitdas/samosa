@@ -13,6 +13,7 @@ const BoardGame = () => {
   const navigate = useNavigate();
   const [diff, setDiff] = useState("");
   const [gameDuration, setGameDuration] = useState("");
+  const [player, setPlayer] = useState("");
 
   const difficultyToStars = (level) => {
     switch (level.toLowerCase()) {
@@ -44,9 +45,21 @@ const BoardGame = () => {
     return gameDurationValue === selectedDuration;
   };
 
+const matchPlayer = (gamePlayers, selectedPlayer) => {
+  if (selectedPlayer === "all") return true;
+
+  const [selectedMin, selectedMax] = selectedPlayer.split("-").map(Number);
+
+  const gameMin = Math.min(...gamePlayers);
+  const gameMax = Math.max(...gamePlayers);
+  
+  return gameMin >= selectedMin && gameMax <= selectedMax;
+};
+
+
 
   return (
-    <section className='w-full flex flex-col justify-center items-center h-full p-5 lg:p-14 overflow-hidden'>
+    <section className='w-full min-h-screen flex flex-col items-center h-full p-5 lg:p-14 overflow-hidden'>
       <div className='w-full flex justify-center items-center mt-20'>
         <h2 className='text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl poppins-medium tracking-tighter text-white'>Our Games</h2>
       </div>
@@ -55,6 +68,20 @@ const BoardGame = () => {
         <h3 className='text-zinc-400 text-xl poppins-regular'><span onClick={handleNavigate} className='text-[#F6A230] cursor-pointer'>Home</span>/Boardgame</h3>
 
         <div className='flex gap-5 mt-5 md:mt-0'>
+          <select
+            value={player}
+            onChange={(e) => setPlayer(e.target.value)}
+            className="px-4 py-2 bg-zinc-50 text-zinc-800 rounded-xl border border-zinc-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:border-zinc-400 cursor-pointer transition"
+          >
+            <option value="" disabled>Player</option>
+            <option value="all">All</option>
+            <option value="1-1">1</option>
+            <option value="2-2">2</option>
+            <option value="1-5">1 - 5</option>
+            <option value="1-6">1 - 6</option>
+            <option value="1-9">1 - 9</option>
+          </select>
+
           <select
             value={diff}
             onChange={(e) => setDiff(e.target.value)}
@@ -84,10 +111,11 @@ const BoardGame = () => {
       </div>
 
       <div className='w-full lg:w-[80%] mx-auto h-full flex flex-wrap justify-center gap-10  mt-10'>
-        {games.filter((g) => {          
+        {games.filter((g) => {
           const difficultyMatch = diff === "" || diff === "all" || getDifficulty(g)?.toLowerCase() === diff;
           const durationMatch = gameDuration === "" || gameDuration === "all" || matchDuration(g.duration, gameDuration);
-          return difficultyMatch && durationMatch;
+          const playerMatch = player === "" || player === "all" || matchPlayer(g.players, player)
+          return difficultyMatch && durationMatch && playerMatch;
         }).map((g, i) => (
           <div key={i} className="w-96 md:w-80 p-2 bg-zinc-100 flex gap-2 justify-between rounded-xl">
             <div className="w-20">
@@ -105,23 +133,23 @@ const BoardGame = () => {
 
             </div>
             <div className="w-full flex flex-col justify-between">
-              <h3 className="josefin-bold text-base capitalize">{g.name}</h3>
+              <h3 className="josefin-bold text-base">{g.name}</h3>
               <div className="flex items-center justify-between">
-                <div className="flex justify-center items-center gap-1 pr-2 border-r border-zinc-300">
+                <div id="player" className="w-1/3 flex justify-center items-center gap-1 border-r border-zinc-300 ">
                   <HiMiniUsers className="text-zinc-600" />
                   <span>{g.players[0]} - {g.players[g.players.length - 1]}</span>
                 </div>
-                <div className="flex justify-center items-center gap-1 pr-2 border-r border-zinc-300">
+                <div id="duration" className="w-1/3 flex justify-center items-center gap-1 border-r border-zinc-300 ">
                   <RxLapTimer className="text-zinc-600" />
                   <span>{g.duration}</span>
                 </div>
-                <div className='w-18 flex items-center gap-1'>
+                <div id="stars" className='w-1/3 flex justify-center items-center gap-1'>
                   {(() => {
                     const difficultyValue = Array.isArray(g.difficulty)
                       ? g.difficulty[0].difficulty : typeof g.difficulty === "object"
                         ? g.difficulty.difficulty : g.difficulty;
                     return Array.from({ length: difficultyToStars(difficultyValue?.toLowerCase() || "") })
-                      .map((_, index) => (<FaStar key={index} className="text-zinc-600" />));
+                      .map((_, index) => (<FaStar key={index} className="star text-zinc-600" />));
                   })()}
                 </div>
               </div>

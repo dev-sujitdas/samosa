@@ -36,7 +36,7 @@ const Navbar = ({ openForm }) => {
       <div className='navbar w-full fixed top-0 z-999'>
         <div className='w-full max-w-600 mx-auto px-5 md:px-12 lg:px-16  bg-[#2f4a2c52] backdrop-blur-2xl relative'>
           <div className='flex justify-between items-center border-b py-4 border-[#16a1557e] '>
-            <div><a href="/"><img className='h-10 lg:h-16 width-fit' src="/logo2-bg.png" alt="" /></a></div>
+            <div><a href="/"><img className='h-10 w-28 lg:h-16 lg:w-42 ' src="/logo2-bg.png" alt="" /></a></div>
             <div onClick={clickHandler}><h2 className='flex items-center gap-1 text-[#F6A230] text-xl md:text-2xl poppins-semibold cursor-pointer'><FiMenu />MENU</h2></div>
             <AnimatePresence>
               {isOpen && (

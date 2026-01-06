@@ -1,6 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = ({openForm}) => {
+
   return (
     <footer className="w-full color-primary relative  border-t border-[#E8BD2D] overflow-hidden">
       <div className="w-full flex lg:flex-row flex-col md:p-5 lg:px-14 py-7 ">
@@ -36,8 +38,9 @@ const Footer = ({openForm}) => {
             </h2>
             <div className='space-y-2'>
             <h3 onClick={openForm} className="text-zinc-200 poppins-medium cursor-pointer">Book Table</h3>
-            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Our Games</h3>
-            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Our Menus</h3>
+            <Link to="/boardgame"><h3 className="text-zinc-200 poppins-medium cursor-pointer my-2">Our Games</h3></Link>
+            <Link to="/ourmenu"><h3 className="text-zinc-200 poppins-medium cursor-pointer my-2">Our Menus</h3></Link>
+            {/* <h3 className="text-zinc-200 poppins-medium cursor-pointer">Our Menus</h3> */}
             <h3 className="text-zinc-200 poppins-medium cursor-pointer">Contact Us</h3>
             </div>
           </div>

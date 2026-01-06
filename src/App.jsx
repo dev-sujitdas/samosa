@@ -14,6 +14,7 @@ import Bubble from './components/ui/Bubble'
 import { Link, Route, Routes } from 'react-router-dom'
 import BoardGame from './pages/BoardGame'
 import Contact from './pages/Contact'
+import OurMenu from './pages/OurMenu'
 
 
 const App = () => {
@@ -44,6 +45,7 @@ const App = () => {
           </div>
         } />
         <Route path='/boardgame' element={<BoardGame />} />        
+        <Route path='/ourmenu' element={<OurMenu />} />        
         <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer openForm={openForm} />

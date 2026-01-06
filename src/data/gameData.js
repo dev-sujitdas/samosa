@@ -207,7 +207,7 @@ export const games = [
     difficulty: "Easy",
     duration: "<30",
     tags: ["card game"],
-    players: [10, 2, 3, 4, 5, 6, 7, 8, 9],
+    players: [1, 2, 3, 4, 5, 6, 7, 8, 9],
   },
   {
     default: "/game-icons/default.webp",
@@ -217,7 +217,7 @@ export const games = [
     difficulty: "Easy",
     duration: "<30",
     tags: ["card game"],
-    players: [10, 2, 3, 4, 5, 6, 7, 8, 9],
+    players: [1, 2, 3, 4, 5, 6, 7, 8, 9],
   },
   {
     default: "/game-icons/default.webp",
@@ -247,7 +247,7 @@ export const games = [
     difficulty: "Easy",
     duration: "<30",
     tags: ["party"],
-    players: [10, 5, 6, 7, 8, 9],
+    players: [1, 5, 6, 7, 8, 9],
   },
   {
     default: "/game-icons/default.webp",
@@ -267,7 +267,7 @@ export const games = [
     difficulty: "Easy",
     duration: "<30",
     tags: ["party"],
-    players: [10, 2, 3, 4, 5, 6, 7, 8, 9],
+    players: [1, 2, 3, 4, 5, 6, 7, 8, 9],
   },
   {
     default: "/game-icons/default.webp",
@@ -805,7 +805,7 @@ export const games = [
     name: "Star realms: Frontiers",
     type: "Expansion",
     difficulty: "Medium",
-    duration: "resource management",
+    duration: "R M",
     tags: [],
     players: [2],
   },
