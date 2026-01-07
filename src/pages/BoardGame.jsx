@@ -47,28 +47,19 @@ const BoardGame = () => {
   };
 
   const matchPlayer = (gamePlayers, selectedPlayer) => {
-    if (selectedPlayer === "all") return true;
+  if (selectedPlayer === "all") return true;
 
-    const [selectedMin, selectedMax] = selectedPlayer.split("-").map(Number);
+  const selected = Number(selectedPlayer);
 
-    const gameMin = Math.min(...gamePlayers);
-    const gameMax = Math.max(...gamePlayers);
+  // 4+ case
+  if (selected === 5) {
+    return gamePlayers.some(p => p >= 5);
+  }
 
-    // if (gameMin === 1 && gameMax === 1) {
-    //   return gameMin === selectedMin && gameMax === selectedMax
-    // }
-    // if (gameMin === 2 && gameMax >= 3) {
-    //   return gameMin === selectedMin && gameMax === selectedMax
-    // }
-    // if (gameMin >= 2 && gameMax >= 3) {
-    //   return gameMin === selectedMin && gameMax === selectedMax
-    // }
-    // if (gameMin === 1 && gameMax === 4) {
-    //   return gameMin === selectedMin && gameMax === selectedMax
-    // }
+  // Exact match case (1–4)
+  return gamePlayers.includes(selected);
+};
 
-    return gameMin >= selectedMin && gameMax <= selectedMax;
-  };
 
 
   return (
@@ -88,11 +79,11 @@ const BoardGame = () => {
           >
             <option value="" disabled>Player</option>
             <option value="all">All</option>
-            <option value="1-1">1</option>
-            <option value="2-3">2</option>
-            <option value="3-6">3</option>
-            <option value="1-4">4</option>
-            <option value="1-9">4+</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">4+</option>
           </select>
 
           <select
