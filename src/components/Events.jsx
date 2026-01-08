@@ -40,7 +40,7 @@ const Events = () => {
                     <h2 className='text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl poppins-medium tracking-tighter text-white'>Serving Playful Bites and Playful Nights.</h2>
                 </div>
             </div>
-            <div className='marquee_track flex flex-nowrap whitespace-nowrap will-change-transform'>
+            {/* <div className='marquee_track flex flex-nowrap whitespace-nowrap will-change-transform'>
                 <div className='marquee_list flex whitespace-nowrap gap-10 mt-10 md:mt-30'>
                     {[...marquees, ...marquees].map((image, index) => (
                         <div key={index} className='w-70 md:w-80 h-100 md:h-120 xl:w-100 xl:h-140  shadow-md overflow-hidden rounded-2xl'>
@@ -48,7 +48,7 @@ const Events = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
 
             <div className='w-full mt-20 md:mt-30 p-5 md:p-12 2xl:p-14'>
                 <div className='w-full flex lg:flex-row flex-col justify-between'>

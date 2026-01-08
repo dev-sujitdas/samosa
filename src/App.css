@@ -180,6 +180,12 @@
   width: fit-content;
 }
 
+@media (width: 1547px){
+  .hero-top{
+    width: 60%;
+  }
+}
+
 .marquee_list {
   display: -webkit-box;
   display: -ms-flexbox;

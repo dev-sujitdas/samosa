@@ -127,9 +127,9 @@ const Snacks = ({ openForm }) => {
 
       {/* content */}
       <div className="snacks-container w-full flex flex-col items-center lg:pb-14 py-12">
-        <div className="w-[85%] xl:w-[60%] flex flex-col justify-center items-center z-50">
+        <div className="w-[85%] xl:w-[65%] flex flex-col justify-center items-center z-50">
           <h2 className="text-4xl md:text-7xl lg:text-8xl 2xl:text-9xl poppins-semibold text-center tracking-tighter text-[#F6A230]">Samosa’s Tasty Snacks</h2>
-          <p className="w-full md:w-[65%] mt-2 md:text-xl poppins-light text-center text-zinc-100">
+          <p className="w-full md:w-[60%] mt-2 md:text-xl poppins-light text-center text-zinc-100">
             A delicious mix of fun and flavor, hand-picked games and tasty bites served hot and fresh.
           </p>
         </div>

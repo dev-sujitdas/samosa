@@ -31,7 +31,7 @@ export const games = [
   },
   {
     default: "/game-icons/default.webp",
-    icon: "/game-icons/dune.webp",
+    icon: "/game-icons/dune imperium.webp",
     name: "Dune Imperium",
     type: "Base",
     difficulty: "Expert",
@@ -561,7 +561,7 @@ export const games = [
   },
   {
     default: "/game-icons/default.webp",
-    icon: "/game-icons/dune.webp",
+    icon: "/game-icons/dune immortality.webp",
     name: "Dune Imperium: Immortality",
     type: "Expansion",
     difficulty: "Medium",
@@ -571,7 +571,7 @@ export const games = [
   },
   {
     default: "/game-icons/default.webp",
-    icon: "/game-icons/dune.webp",
+    icon: "/game-icons/dune rise of ix.webp",
     name: "Dune Imperium: Rise of Ix",
     type: "Expansion",
     difficulty: "Easy",
@@ -900,7 +900,7 @@ export const games = [
     players: [1],
   },
   {
-    default: "/game-icons/default.webp",
+    default: "/game-icons/bluffit.webp",
     icon: "/game-icons/bluff it.webp",
     name: "Bluff It",
     type: "Base",
