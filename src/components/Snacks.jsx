@@ -9,6 +9,7 @@ import {
   animate as fmAnimate,
 } from "framer-motion";
 import Button from "./ui/Button";
+import { Link } from "react-router-dom";
 
 const floatImages = [
   { url: "/float-images/bowl.png", top: "12%", left: "15%", size: "15VW", rotation: "-20deg" },
@@ -138,8 +139,8 @@ const Snacks = ({ openForm }) => {
           <img src="/samosa-plate.png" className=" h-48 md:h-80 lg:h-100 xl:h-132 w-fit rounded-2xl" alt="" />
         </div>
 
-        <div className="mt-10">
-          <Button text={"View our menu"} color={"#F6A230"} textColor={"#000"} />
+        <div className="mt-10">          
+          <Button text={"View our menu"} color={"#F6A230"} textColor={"#000"} link={"/ourmenu"} />          
         </div>
 
         <div className="w-[80%] md:w-[75%] 2xl:w-[60%] color-secondry flex flex-col justify-center items-center mt-10 md:mt-20 md:mb-10 rounded-2xl p-5 lg:p-10 shadow-lg z-50">
