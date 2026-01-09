@@ -10,7 +10,6 @@ import { div } from 'motion/react-client';
 const text = "Every move comes with samosas.";
 
 
-
 const heroContent = [
     {
         icon: <FaChess />,

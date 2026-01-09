@@ -21,7 +21,7 @@ const Events = () => {
 
   
   const games = useCounter(startCount ? 50 : 0, 100, 10);
-  const tables = useCounter(startCount ? 0 : 0, 20, 20);
+  const tables = useCounter(startCount ? 0 : 0, 10, 10);
   const players = useCounter(startCount ? 450 : 0, 500, 10);
 
   
