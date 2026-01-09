@@ -136,7 +136,7 @@ const Snacks = ({ openForm }) => {
         </div>
 
         <div className="samosa-plate w-full mt-10 flex justify-center items-center relative">
-          <img src="/samosa-plate.png" className=" h-48 md:h-80 lg:h-100 xl:h-132 w-fit rounded-2xl" alt="" />
+          <img src="/images/samosa-plate.png" className=" h-48 md:h-80 lg:h-100 xl:h-132 w-fit rounded-2xl" alt="" />
         </div>
 
         <div className="mt-10">          

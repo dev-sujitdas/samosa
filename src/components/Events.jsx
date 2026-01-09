@@ -4,14 +4,14 @@ import Button from './ui/Button'
 import useCounter from './features/Counter';
 
 const marquees = [
-    { url: "/img1.jpg", rotation: "", title: "", para: "" },
-    { url: "/img2.jpg", rotation: "", title: "", para: "" },
-    { url: "/img3.jpg", rotation: "", title: "", para: "" },
-    { url: "/img4.jpg", rotation: "", title: "", para: "" },
-    { url: "/img5.jpg", rotation: "", title: "", para: "" },
-    { url: "/img6.jpg", rotation: "", title: "", para: "" },
-    { url: "/img7.jpg", rotation: "", title: "", para: "" },
-    { url: "/img8.jpg", rotation: "", title: "", para: "" },
+    { url: "/images/img1.jpg", rotation: "", title: "", para: "" },
+    { url: "/images/img2.jpg", rotation: "", title: "", para: "" },
+    { url: "/images/img3.jpg", rotation: "", title: "", para: "" },
+    { url: "/images/img4.jpg", rotation: "", title: "", para: "" },
+    { url: "/images/img5.jpg", rotation: "", title: "", para: "" },
+    { url: "/images/img6.jpg", rotation: "", title: "", para: "" },
+    { url: "/images/img7.jpg", rotation: "", title: "", para: "" },
+    { url: "/images/img8.jpg", rotation: "", title: "", para: "" },
 ];
 
 const Events = () => {
@@ -71,7 +71,7 @@ const Events = () => {
                     <div className='middle w-full lg:w-[42%] h-120 flex flex-col justify-between'>
                         <div className='flex h-[49%] justify-between '>
                             <div className='image w-[49%] h-full rounded-2xl overflow-hidden'>
-                                <img src="/img4.jpg" className='w-full h-full object-cover rounded-2xl hover:scale-110 duration-300' />
+                                <img src="/images/img4.jpg" className='w-full h-full object-cover rounded-2xl hover:scale-110 duration-300' />
                             </div>
                             <div className='content w-[49%] h-full flex flex-col justify-between p-5 rounded-2xl border border-[#FFCA15] '>
                                 <h2 className='text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl  poppins-bold text-white tracking-tighter'>{tables}</h2>
@@ -89,7 +89,7 @@ const Events = () => {
                                 </div>
                             </div>
                             <div className='image w-[49%] h-full rounded-2xl overflow-hidden'>
-                                <img src="/samosa.jpg" className='w-full h-full object-cover rounded-2xl hover:scale-110 duration-300' />
+                                <img src="/images/samosa.jpg" className='w-full h-full object-cover rounded-2xl hover:scale-110 duration-300' />
                             </div>
                         </div>
 

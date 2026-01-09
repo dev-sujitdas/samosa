@@ -10,7 +10,7 @@ const CTA = ({openForm}) => {
   return (
     <section className='cta w-full h-screen color-secondry relative flex xl:flex-row flex-col'>
         <div className='w-full xl:w-1/2 h-1/2 xl:h-full relative'>
-            <img src="/img10.jpg" className='w-full h-full object-cover ' />
+            <img src="/images/img10.jpg" className='w-full h-full object-cover ' />
             {/* <div className='absolute top-0 left-0 w-full h-full bg-[#00000031]'></div> */}
         </div>
         <div className='w-full xl:w-1/2 h-1/2 xl:h-full p-5 md:p-10 flex flex-col justify-end'>
