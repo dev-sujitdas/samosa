@@ -105,16 +105,16 @@ const Hero = ({ openForm }) => {
                 <motion.h1
                     initial="hidden"
                     animate="visible"
-                    className="text-4xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl poppins-bold text-[#F6A230] tracking-tighter flex flex-wrap"
+                    className="text-4xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl poppins-bold text-[#F6A230] tracking-tighter flex flex-wrap gap-2 md:gap-3"
                 >
-                    {text.split("").map((char, i) => (
+                    {text.split(" ").map((char, i) => (
                         <motion.span
                             key={i}
                             variants={letterVariant}
                             custom={i}
                             className="flex"
                         >
-                            {char === " " ? "\u00A0" : char}
+                            {char}
                         </motion.span>
                     ))}
                 </motion.h1>
