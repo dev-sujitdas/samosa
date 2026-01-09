@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useInView, useAnimation } from "framer-motion";
 import { games } from "../data/gameData";
 import { FaDiceFive, FaChessKnight, FaStar } from "react-icons/fa";
+import { GiBrain } from "react-icons/gi";
 import { HiMiniUsers } from "react-icons/hi2";
 import { RxLapTimer } from "react-icons/rx";
 import Button from "./ui/Button";
@@ -135,7 +136,7 @@ const Games = () => {
                                                     ? g.difficulty[0].difficulty : typeof g.difficulty === "object"
                                                         ? g.difficulty.difficulty : g.difficulty;
                                                 return Array.from({ length: difficultyToStars(difficultyValue?.toLowerCase() || "") })
-                                                    .map((_, index) => (<FaStar key={index} className="star text-zinc-600" />));
+                                                    .map((_, index) => (<GiBrain key={index} className="star text-zinc-600" />));
                                             })()}
                                     </div>
                                 </div>
