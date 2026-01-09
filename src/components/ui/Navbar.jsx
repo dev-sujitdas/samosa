@@ -15,7 +15,7 @@ const Navbar = ({ openForm }) => {
     { label: "Book Table", type: "action", onClick: openForm },
     { label: "Our Games", type: "route", to: "/boardgame" },
     { label: "Our Menus", type: "route", to: "/ourmenu" },
-    { label: "Contact Us", type: "route", to: "/contact" },
+    // { label: "Contact Us", type: "route", to: "/contact" },
   ];
 
 

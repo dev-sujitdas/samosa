@@ -41,7 +41,7 @@ const Footer = ({openForm}) => {
             <Link to="/boardgame"><h3 className="text-zinc-200 poppins-medium cursor-pointer my-2">Our Games</h3></Link>
             <Link to="/ourmenu"><h3 className="text-zinc-200 poppins-medium cursor-pointer my-2">Our Menus</h3></Link>
             {/* <h3 className="text-zinc-200 poppins-medium cursor-pointer">Our Menus</h3> */}
-            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Contact Us</h3>
+            {/* <h3 className="text-zinc-200 poppins-medium cursor-pointer">Contact Us</h3> */}
             </div>
           </div>
           <div className="">
