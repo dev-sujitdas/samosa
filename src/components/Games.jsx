@@ -19,6 +19,12 @@ const Games = () => {
     const isInView = useInView(containerRef, { amount: 0.5 });
     const controls = useAnimation();
     const [isMobile, setIsMobile] = useState(false);
+    // const [randomGames, setRandomGames] = useState([]);
+
+    // useEffect(() => {
+    //     const shuffled = [...games].sort(() => Math.random() - 0.5);
+    //     setRandomGames(shuffled);
+    // }, []);
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -31,69 +37,69 @@ const Games = () => {
         }
     }, [isInView]);
 
-    const difficultyToStars = (level) => { 
-        switch (level.toLowerCase()) 
-        { 
-            case "easy": return 1; 
-            case "medium": return 2; 
-            case "expert": return 3; 
-            default: return 0; 
-        } };
+    const difficultyToStars = (level) => {
+        switch (level.toLowerCase()) {
+            case "easy": return 1;
+            case "medium": return 2;
+            case "expert": return 3;
+            default: return 0;
+        }
+    };
 
- useEffect(() => {
-    const media = window.matchMedia("(max-width: 768px)");
+    useEffect(() => {
+        const media = window.matchMedia("(max-width: 768px)");
 
-    const handleChange = () => setIsMobile(media.matches);
+        const handleChange = () => setIsMobile(media.matches);
 
-    handleChange(); 
-    media.addEventListener("change", handleChange);
+        handleChange();
+        media.addEventListener("change", handleChange);
 
-    return () => media.removeEventListener("change", handleChange);
-}, []);
- 
+        return () => media.removeEventListener("change", handleChange);
+    }, []);
+
 
     return (
         <section ref={containerRef} className="w-full h-full color-primary relative overflow-hidden">
             <div className="lg:block hidden">
-            {floatImages.map((img, index) => {
+                {floatImages.map((img, index) => {
 
-                // Parallax effect → each image moves differently
-                const yMove = useTransform(
-                    scrollYProgress,
-                    [0, 1],
-                    [0, -(index + 1) * 120] 
-                );
+                    // Parallax effect → each image moves differently
+                    const yMove = useTransform(
+                        scrollYProgress,
+                        [0, 1],
+                        [0, -(index + 1) * 120]
+                    );
 
-                return (
-                    <motion.img
-                        key={index}
-                        src={img.url}
-                        className="absolute drop-shadow-xl z-777"
-                        style={{
-                            top: img.top,
-                            left: img.left,
-                            width: img.sizeWidth,
-                            height: img.sizeHeight,
-                            rotate: img.rotation,
-                            y: yMove,
-                        }}
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={controls}
-                        variants={{
-                            visible: {
-                                scale: 1,
-                                opacity: 1,
-                                transition: {
-                                    type: "spring",
-                                    damping: 8,
-                                    stiffness: 120,
-                                    delay: index * 0.25,
+                    return (
+                        <motion.img
+                            key={index}
+                            src={img.url}
+                            className="absolute drop-shadow-xl z-777"
+                            style={{
+                                top: img.top,
+                                left: img.left,
+                                width: img.sizeWidth,
+                                height: img.sizeHeight,
+                                rotate: img.rotation,
+                                y: yMove,
+                            }}
+                            initial={{ scale: 0, opacity: 0 }}
+                            animate={controls}
+                            variants={{
+                                visible: {
+                                    scale: 1,
+                                    opacity: 1,
+                                    transition: {
+                                        type: "spring",
+                                        damping: 8,
+                                        stiffness: 120,
+                                        delay: index * 0.25,
+                                    },
                                 },
-                            },
-                        }}
-                    />
-                );
-            })}
+                            }}
+                        />
+                    );
+                })}
             </div>
 
 
@@ -132,12 +138,12 @@ const Games = () => {
                                     </div>
                                     <div id="stars" className='w-1/3 flex justify-center items-center gap-1'>
                                         {(() => {
-                                                const difficultyValue = Array.isArray(g.difficulty)
-                                                    ? g.difficulty[0].difficulty : typeof g.difficulty === "object"
-                                                        ? g.difficulty.difficulty : g.difficulty;
-                                                return Array.from({ length: difficultyToStars(difficultyValue?.toLowerCase() || "") })
-                                                    .map((_, index) => (<GiBrain key={index} className="star text-zinc-600" />));
-                                            })()}
+                                            const difficultyValue = Array.isArray(g.difficulty)
+                                                ? g.difficulty[0].difficulty : typeof g.difficulty === "object"
+                                                    ? g.difficulty.difficulty : g.difficulty;
+                                            return Array.from({ length: difficultyToStars(difficultyValue?.toLowerCase() || "") })
+                                                .map((_, index) => (<GiBrain key={index} className="star text-zinc-600" />));
+                                        })()}
                                     </div>
                                 </div>
                             </div>
