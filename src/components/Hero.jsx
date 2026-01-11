@@ -164,7 +164,7 @@ const Hero = ({ openForm }) => {
                 </div>
                 <div className='right flex items-end lg:w-[50%] xl:w-[40%] 2xl:w-[30%] h-full'>
                     <div>
-                        <h2 className='text-white text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl poppins-light  uppercase mb-4 xl:mb-3 2xl:mb-5'>Dive into a world of board games, chrispy bites, and endless laughter.</h2>
+                        <h2 className='text-white text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl poppins-light  uppercase mb-4 xl:mb-3 2xl:mb-5'>Dive into a world of board games, crispy bites, and endless laughter.</h2>
                         <Button text={"Book a table"} color={"#F6A230"} clickHandler={openFormHandler} />
                     </div>
                 </div>
