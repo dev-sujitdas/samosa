@@ -19,12 +19,12 @@ const Games = () => {
     const isInView = useInView(containerRef, { amount: 0.5 });
     const controls = useAnimation();
     const [isMobile, setIsMobile] = useState(false);
-    // const [randomGames, setRandomGames] = useState([]);
+    const [randomGames, setRandomGames] = useState([]);
 
-    // useEffect(() => {
-    //     const shuffled = [...games].sort(() => Math.random() - 0.5);
-    //     setRandomGames(shuffled);
-    // }, []);
+    useEffect(() => {
+        const shuffled = [...games].sort(() => Math.random() - 0.5);
+        setRandomGames(shuffled);
+    }, []);
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -120,7 +120,7 @@ const Games = () => {
                 </div>
 
                 <div className="game-list w-full md:w-full xl:w-[70%] relative mt-10 p-2 md:p-0 md:mt-20 mb-10 flex justify-center flex-wrap gap-5">
-                    {games.slice(0, isMobile ? 4 : 12).map((g, i) => (
+                    {randomGames.slice(0, isMobile ? 4 : 12).map((g, i) => (
                         <div key={i} className="w-96 md:w-80 p-2 bg-zinc-100 flex gap-2 justify-between rounded-xl">
                             <div className="w-20">
                                 <img src={g.icon} className="w-16 h-16 rounded-xl object-cover" />

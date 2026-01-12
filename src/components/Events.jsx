@@ -56,8 +56,7 @@ const Events = () => {
                         <h2 className='text-white text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl poppins-regular tracking-tighter'>Where every bite comes with a roll of the dice</h2>
                     </div>
                     <div className='w-full md:w-[70%] lg:w-[45%] 2xl:w-[40%] mt-5 lg:mt-0'>
-                        <h4 className='poppins-light xl:text-xl 2xl:text-2xl text-[#FFCA15]'>Since opening our doors, we've hosted countless game nights, created lasting friendships,
-                            and served hundrards of plates of samosa. These numbers tell our story.</h4>
+                        <h4 className='poppins-light xl:text-xl 2xl:text-2xl text-[#FFCA15]'>We host game nights, hobby sessions and competitions creating lasting friendships and serve hundreds of plates of samosas. We want to create a community.</h4>
                     </div>
                 </div>
                 <div ref={containerRef} className='event-container w-full flex lg:flex-row flex-col justify-between gap-5 xl:gap-10 mt-20'>
