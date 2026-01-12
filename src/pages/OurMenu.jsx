@@ -16,7 +16,7 @@ const OurMenu = () => {
                 <div className='mt-10  flex flex-col justify-center items-center relative rounded-2xl overflow-hidden'>
                     <img src="/images/menu.jpg" alt="" className='rounded-2xl' />
                     <div className='absolute w-full h-full top-0 left-0 bg-[#9693933b] backdrop-blur-xl z-50 rounded-2xl flex justify-center items-center'>
-                        <h2 className='text-3xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl poppins-bold'>Comming Soon</h2>
+                        <h2 className='text-3xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl poppins-bold'>Coming Soon</h2>
                     </div>
                 </div>
         </section>
