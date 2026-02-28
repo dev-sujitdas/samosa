@@ -35,9 +35,9 @@ const heroContent = [
 ];
 
 const imgs = [
-    { url: "/images/img1.jpg", size: "18vw", top: "5%", left: "50%", rotate: "0deg", isActive: false },
-    { url: "/images/img2.jpg", size: "18vw", top: "15%", left: "61%", rotate: "18deg", isActive: false },
-    { url: "/images/img3.jpg", size: "18vw", top: "15%", left: "38%", rotate: "-20deg", isActive: false },
+    { url: "/images/img1.JPG", size: "18vw", top: "5%", left: "50%", rotate: "0deg", isActive: false },
+    { url: "/images/img2.JPG", size: "18vw", top: "15%", left: "61%", rotate: "18deg", isActive: false },
+    { url: "/images/img3.JPG", size: "18vw", top: "15%", left: "38%", rotate: "-20deg", isActive: false },
     { url: "/images/pizza.jpg", size: "12vw", top: "45%", left: "45%", rotate: "-12deg", isActive: false },
     { url: "/images/samosa.jpg", size: "12vw", top: "45%", left: "55%", rotate: "12deg", isActive: false },
 ];
