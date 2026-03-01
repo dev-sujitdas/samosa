@@ -272,5 +272,8 @@
   .game-list{
     padding: 0;
   }
+  .images2{
+    display: none;
+  }
 }
 

@@ -41,7 +41,12 @@ const imgs = [
     { url: "/images/pizza.jpg", size: "12vw", top: "45%", left: "45%", rotate: "-12deg", isActive: false },
     { url: "/images/samosa.jpg", size: "12vw", top: "45%", left: "55%", rotate: "12deg", isActive: false },
 ];
-
+const img2 = [
+    { url: "/images/img1.jpg", size: "25vw", top: "25%", left: "75%", rotate: "-10deg", isActive: false },
+    { url: "/images/img2.jpg", size: "25vw", top: "27%", left: "35%", rotate: "18deg", isActive: false },
+    { url: "/images/img3.jpg", size: "25vw", top: "25%", left: "20%", rotate: "-20deg", isActive: false },    
+    { url: "/images/img4.jpg", size: "25vw", top: "27%", left: "55%", rotate: "12deg", isActive: false },
+]
 
 const Hero = ({ openForm }) => {
     const [images, setimages] = useState(imgs);
@@ -118,6 +123,23 @@ const Hero = ({ openForm }) => {
                         </motion.span>
                     ))}
                 </motion.h1>
+            </div>
+
+            <div className='images2 middle relative xl:hidden block w-full h-full'>
+                    {img2.map((image, index)=>(
+                        <motion.div
+                        key={index}                
+                        className="absolute xl:w-48 2xl:w-62 rounded-xl overflow-hidden shadow-xl -translate-x-1/2"
+                        style={{
+                            left: image.left,
+                            top: image.top,                            
+                            height: image.size,
+                            rotate: image.rotate                            
+                        }}
+                    >
+                        <img src={image.url} className="w-full h-full object-cover rounded-xl" />
+                    </motion.div>
+                    ))}
             </div>
 
             <div className='middle w-full h-full relative hidden xl:block'>

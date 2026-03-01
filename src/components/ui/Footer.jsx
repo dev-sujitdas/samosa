@@ -30,9 +30,9 @@ const Footer = ({openForm}) => {
             </h3>
           </div>
         </div>
-        <div className="lg:w-1/2 w-full p-5 flex lg:flex-row flex-col gap-10 lg:gap-30 justify-end z-10">    
+        <div className="lg:w-[70%] w-full p-5 flex lg:flex-row flex-col lg:gap-20 xl:gap-30 justify-end z-10">    
     
-          <div className="">
+          <div className=" ">
             <h2 className="poppins-bold text-xl mb-4 text-[#FFCA15]">
               EXPLORE
             </h2>
