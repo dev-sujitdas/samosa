@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
@@ -9,6 +9,7 @@ import { MdEventAvailable } from "react-icons/md";
 
 const Navbar = ({ openForm }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSmall, setIsSmall] = useState(false);
 
   const menus = [
     { label: "Book Table", type: "action", onClick: openForm },
@@ -17,6 +18,18 @@ const Navbar = ({ openForm }) => {
     { label: "Book Event", type: "redirect", to: "" },
   ];
 
+  useEffect(()=>{
+    const handleResize = ()=>{
+      if(window.innerWidth <= 768){
+        setIsSmall(true);
+      }else setIsSmall(false);
+    }
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return ()=> window.removeEventListener('resize', handleResize)
+  },[])
 
   const clickHandler = () => {
     setIsOpen(prev => !prev);
@@ -39,8 +52,8 @@ const Navbar = ({ openForm }) => {
         <div className='w-full max-w-600 mx-auto px-5 md:px-12 lg:px-16  bg-[#2f4a2c52] backdrop-blur-2xl relative'>
           <div className='flex justify-between items-center border-b py-4 border-[#16a1557e] '>
             <div><a href="/"><img className='h-10 w-28 lg:h-16 lg:w-42 ' src="/images/logo2-bg.png" alt="" /></a></div>
-            <div className='flex gap-10 items-center'>
-            <a href="https://samosa.odoo.com"><h2 className='text-sm lg:text-lg poppins-semibold text-black px-2 py-1 lg:px-4 lg:py-2 rounded-full bg-white md:flex items-center md:gap-2 hidden '><MdEventAvailable />Events</h2></a>
+            <div className='flex gap-2 md:gap-10 items-center'>
+            <a href="https://samosa.odoo.com"><h2 className='text-sm lg:text-lg poppins-semibold text-black px-1 py-1 lg:px-4 lg:py-2 rounded-full bg-white md:flex items-center md:gap-2 '><MdEventAvailable />{isSmall? "" : "Events"}</h2></a>
             {/* <Button text={"Explore Events"}/> */}
             <div onClick={clickHandler}><h2 className='flex items-center gap-1 text-[#F6A230] text-xl md:text-2xl poppins-semibold cursor-pointer'><FiMenu />MENU</h2></div>
             </div>

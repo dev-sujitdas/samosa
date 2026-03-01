@@ -129,7 +129,7 @@ const Hero = ({ openForm }) => {
                     {img2.map((image, index)=>(
                         <motion.div
                         key={index}                
-                        className="absolute xl:w-48 2xl:w-62 rounded-xl overflow-hidden shadow-xl -translate-x-1/2"
+                        className="absolute w-30 md:w-48 lg:w-58 rounded-xl overflow-hidden shadow-xl -translate-x-1/2"
                         style={{
                             left: image.left,
                             top: image.top,                            
