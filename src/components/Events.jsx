@@ -7,17 +7,17 @@ import { useGSAP } from "@gsap/react";
 const instaId = "https://www.instagram.com/reel/DTjRXLviKvE/?igsh=MTZneWliOW4xZmh2dw==";
 
 const marquees = [
-    { url: "/images/img1.JPG", tag: "img", title: "", para: "", insta: instaId },
-    { url: "/images/img2.JPG", tag: "img", title: "", para: "", insta: instaId },
+    { url: "/images/img1.jpg", tag: "img", title: "", para: "", insta: instaId },
+    { url: "/images/img2.jpg", tag: "img", title: "", para: "", insta: instaId },
     { url: "/videos/vid1.mp4", tag: "vid", title: "", para: "", insta: "https://www.instagram.com/reel/DUEkkgRDHfw/?igsh=MWdzcHI3Z2lsbGpybw==" },
-    { url: "/images/img3.JPG", tag: "img", title: "", para: "", insta: instaId },
-    { url: "/images/img4.JPG", tag: "img", title: "", para: "", insta: instaId },
+    { url: "/images/img3.jpg", tag: "img", title: "", para: "", insta: instaId },
+    { url: "/images/img4.jpg", tag: "img", title: "", para: "", insta: instaId },
     { url: "/videos/vid2.mp4", tag: "vid", title: "", para: "", insta: "https://www.instagram.com/reel/DURYGmTgEWl/?igsh=cTlja2lmMXlpZDU3" },
-    { url: "/images/img5.JPG", tag: "img", title: "", para: "", insta: instaId },
-    { url: "/images/img6.JPG", tag: "img", title: "", para: "", insta: instaId },
+    { url: "/images/img5.jpg", tag: "img", title: "", para: "", insta: instaId },
+    { url: "/images/img6.jpg", tag: "img", title: "", para: "", insta: instaId },
     { url: "/videos/vid3.mp4", tag: "vid", title: "", para: "", insta: "https://www.instagram.com/reel/DU_1GZCiHx9/?igsh=Zzk5OGtxNjE0dm93" },
-    { url: "/images/img7.JPG", tag: "img", title: "", para: "", insta: instaId },
-    { url: "/images/img8.JPG", tag: "img", title: "", para: "", insta: instaId },
+    { url: "/images/img7.jpg", tag: "img", title: "", para: "", insta: instaId },
+    { url: "/images/img8.jpg", tag: "img", title: "", para: "", insta: instaId },
     { url: "/videos/vid4.mp4", tag: "vid", title: "", para: "", insta: "https://www.instagram.com/reel/DVMaCDGgG0M/?igsh=MTFjYWY5MHRwZ3FleA==" },
 ];
 
