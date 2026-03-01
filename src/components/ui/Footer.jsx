@@ -40,6 +40,7 @@ const Footer = ({openForm}) => {
             <h3 onClick={openForm} className="text-zinc-200 poppins-medium cursor-pointer">Book Table</h3>
             <Link to="/boardgame"><h3 className="text-zinc-200 poppins-medium cursor-pointer my-2">Our Games</h3></Link>
             <Link to="/ourmenu"><h3 className="text-zinc-200 poppins-medium cursor-pointer my-2">Our Menus</h3></Link>
+            <a to="https://samosa.odoo.com"><h3 className="text-zinc-200 poppins-medium cursor-pointer my-2">Book Event</h3></a>
             {/* <h3 className="text-zinc-200 poppins-medium cursor-pointer">Our Menus</h3> */}
             {/* <h3 className="text-zinc-200 poppins-medium cursor-pointer">Contact Us</h3> */}
             </div>

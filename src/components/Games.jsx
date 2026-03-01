@@ -60,7 +60,7 @@ const Games = () => {
 
     return (
         <section ref={containerRef} className="w-full h-full color-primary relative overflow-hidden">
-            <div className="lg:block hidden">
+            <div className="xl:block hidden">
                 {floatImages.map((img, index) => {
 
                     // Parallax effect → each image moves differently

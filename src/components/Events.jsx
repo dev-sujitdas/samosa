@@ -40,13 +40,16 @@ const Events = () => {
             setStartCount(true);
         }
     }, [isInView]);
-
     const handleMouseMove = (e) => {
         const container = e.currentTarget.getBoundingClientRect();
         const follower = e.currentTarget.querySelector(".mousefollower");
 
-        const x = e.clientX - container.left - 50; // half of 112px
+        if (!follower) return;
+
+        const x = e.clientX - container.left - 50;
         const y = e.clientY - container.top - 50;
+
+        gsap.killTweensOf(follower); // 🔥 important
 
         gsap.to(follower, {
             opacity: 1,
@@ -59,16 +62,22 @@ const Events = () => {
 
     const handleMouseEnter = (e) => {
         const follower = e.currentTarget.querySelector(".mousefollower");
+        if (!follower) return;
+
+        gsap.killTweensOf(follower); // 🔥 important
 
         gsap.fromTo(
             follower,
-            { scale: 0.5, opacity: 0 },
-            { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.7)" }
+            { scale: 1, opacity: 0 },
+            { opacity: 1, duration: 0.3, ease: "back.out(1.7)" }
         );
     };
 
     const handleMouseLeave = (e) => {
         const follower = e.currentTarget.querySelector(".mousefollower");
+        if (!follower) return;
+
+        gsap.killTweensOf(follower); // 🔥 important
 
         gsap.to(follower, {
             scale: 0.5,
@@ -76,11 +85,12 @@ const Events = () => {
             duration: 0.2,
         });
     };
-  const clickHandler = (url) => {
-  if (url) {
-    window.open(url, "_blank", "noopener,noreferrer");
-  }
-};
+
+    const clickHandler = (url) => {
+        if (url) {
+            window.open(url, "_blank", "noopener,noreferrer");
+        }
+    };
     return (
         <section className='w-full h-full color-primary flex flex-col justify-between relative'>
             <div className='w-full mt-10 p-5 md:p-14'>
@@ -98,7 +108,7 @@ const Events = () => {
                             onMouseMove={handleMouseMove}
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
-                            onClick={()=>clickHandler(item.insta)}
+                            onClick={() => clickHandler(item.insta)}
                             className='card-container w-70 md:w-80 h-100 md:h-120 xl:w-100 xl:h-140  shadow-md overflow-hidden rounded-2xl relative cursor-none'>
                             {item.tag === "img" ?
                                 <img src={item.url} className='w-full h-full object-cover rounded-2xl hover:scale-105 duration-300' />

@@ -72,7 +72,7 @@ const Snacks = ({ openForm }) => {
 
   return (
     <section ref={containerRef} className="w-full h-full color-primary relative">
-      <div className="hidden lg:block">
+      <div className="hidden xl:block">
         {floatImages.map((img, index) => {
         // parallax motion value derived from scroll progress
         // const yParallax = useTransform(scrollYProgress, [0, 1], [0, -(index + 1) * 120]);

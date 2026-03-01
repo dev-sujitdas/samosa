@@ -3,9 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { Link } from 'react-router-dom';
-import BoardGame from '../../pages/BoardGame';
-import ContactUs from '../../pages/Contact';
-import { div } from 'motion/react-client';
+import { MdEventAvailable } from "react-icons/md";
+
 
 
 const Navbar = ({ openForm }) => {
@@ -15,7 +14,7 @@ const Navbar = ({ openForm }) => {
     { label: "Book Table", type: "action", onClick: openForm },
     { label: "Our Games", type: "route", to: "/boardgame" },
     { label: "Our Menus", type: "route", to: "/ourmenu" },
-    // { label: "Contact Us", type: "route", to: "/contact" },
+    { label: "Book Event", type: "redirect", to: "" },
   ];
 
 
@@ -29,6 +28,9 @@ const Navbar = ({ openForm }) => {
     if (menu.type === "action") {
       menu.onClick?.();
     }
+    if(menu.type === "redirect"){
+      window.location.href = "https://samosa.odoo.com"
+    }
   };
 
   return (
@@ -37,8 +39,9 @@ const Navbar = ({ openForm }) => {
         <div className='w-full max-w-600 mx-auto px-5 md:px-12 lg:px-16  bg-[#2f4a2c52] backdrop-blur-2xl relative'>
           <div className='flex justify-between items-center border-b py-4 border-[#16a1557e] '>
             <div><a href="/"><img className='h-10 w-28 lg:h-16 lg:w-42 ' src="/images/logo2-bg.png" alt="" /></a></div>
-            <div className='flex gap-20 items-center'>
-            <a href="https://samosa.odoo.com"><h2 className='text-lg poppins-semibold text-[#f6a230]'>Samosa Events</h2></a>
+            <div className='flex gap-10 items-center'>
+            <a href="https://samosa.odoo.com"><h2 className='text-lg poppins-semibold text-black px-4 py-2 rounded-full bg-white flex items-center gap-2'><MdEventAvailable />Events</h2></a>
+            {/* <Button text={"Explore Events"}/> */}
             <div onClick={clickHandler}><h2 className='flex items-center gap-1 text-[#F6A230] text-xl md:text-2xl poppins-semibold cursor-pointer'><FiMenu />MENU</h2></div>
             </div>
             <AnimatePresence>
