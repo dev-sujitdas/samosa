@@ -71,7 +71,7 @@ const Footer = ({openForm}) => {
               <a href="mailto:ndn.foods.maastricht@gmail.com">Reservations</a>
             </h3>
             <h3 className="text-zinc-200 poppins-medium cursor-pointer">
-              <a href="mailto:ndn.foods.maastricht@gmail.com">Help center</a>
+              <a href="tel:+31627319421">Help center</a>
             </h3>
             
             </div>
