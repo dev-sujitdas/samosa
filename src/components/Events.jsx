@@ -24,23 +24,32 @@ const marquees = [
 
 const Events = () => {
     const containerRef = useRef(null);
-    const followerContainerRef = useRef(null)
     const mouseRef = useRef(null);
-    const followerRef = useRef(null);
     const isInView = useInView(containerRef, { amount: 0.4 });
     const [startCount, setStartCount] = useState(false);
+    const [isLarge, setIsLarge] = useState(false);
 
 
     const games = useCounter(startCount ? 50 : 0, 100, 10);
     const tables = useCounter(startCount ? 0 : 0, 10, 10);
     const players = useCounter(startCount ? 450 : 0, 500, 10);
 
+    useEffect(()=>{
+        const handleResize = ()=>{
+            setIsLarge(window.innerWidth > 1024);
+        }
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return ()=> window.removeEventListener('resize', handleResize);
+    },[]);
 
     useEffect(() => {
         if (isInView) {
             setStartCount(true);
         }
     }, [isInView]);
+
     const handleMouseMove = (e) => {
         const container = e.currentTarget.getBoundingClientRect();
         const follower = e.currentTarget.querySelector(".mousefollower");
@@ -104,11 +113,10 @@ const Events = () => {
                 <div className='marquee_list flex whitespace-nowrap gap-10 mt-10 md:mt-30'>
                     {[...marquees, ...marquees].map((item, index) => (
                         <div
-                            key={index}
-                            ref={followerContainerRef}
-                            onMouseMove={handleMouseMove}
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
+                            key={index}                            
+                            onMouseMove={isLarge ? handleMouseMove : undefined}
+                            onMouseEnter={isLarge ? handleMouseEnter : undefined}
+                            onMouseLeave={isLarge ? handleMouseLeave : undefined}
                             onClick={() => clickHandler(item.insta)}
                             className='card-container w-70 md:w-80 h-100 md:h-120 xl:w-100 xl:h-140  shadow-md overflow-hidden rounded-2xl relative cursor-none'>
                             {item.tag === "img" ?
@@ -126,8 +134,7 @@ const Events = () => {
                                     </div>
                                 </div>
                             </div>
-
-                            <div ref={followerRef} className="mousefollower absolute top-0 left-0 h-28 w-28 rounded-full bg-black/30 backdrop-blur-sm  flex justify-center items-center opacity-0 pointer-events-none z-999">
+                            <div  className="mousefollower absolute top-0 left-0 h-28 w-28 rounded-full bg-black/30 backdrop-blur-sm  flex justify-center items-center opacity-0 pointer-events-none z-999">
                                 <h3 className="poppins-medium text-zinc-200 text-sm text-center">View <br /> Instagram</h3>
                             </div>
                         </div>
@@ -170,7 +177,7 @@ const Events = () => {
                             <div className='content w-[49%] h-full flex flex-col justify-end p-5 rounded-2xl border border-[#FFCA15] '>
                                 <div>
                                     <h3 className='text-2xl xl:text-3xl 2xl:text-4xl text-[#FFCA15] poppins-semibold tracking-tighter'>Tasty samosas</h3>
-                                    <p className='text:sm sm:text-base 2xl:text-lg poppins-light text-amber-50 mt-2'>Waiting for your next bite</p>
+                                    <p className='text-sm sm:text-base 2xl:text-lg poppins-light text-amber-50 mt-2'>Waiting for your next bite</p>
                                 </div>
                             </div>
                             <div className='image w-[49%] h-full rounded-2xl overflow-hidden'>

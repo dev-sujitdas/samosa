@@ -40,13 +40,13 @@ const Footer = ({openForm}) => {
             <h3 onClick={openForm} className="text-zinc-200 poppins-medium cursor-pointer">Book Table</h3>
             <Link to="/boardgame"><h3 className="text-zinc-200 poppins-medium cursor-pointer my-2">Our Games</h3></Link>
             <Link to="/ourmenu"><h3 className="text-zinc-200 poppins-medium cursor-pointer my-2">Our Menus</h3></Link>
-            <a to="https://samosa.odoo.com"><h3 className="text-zinc-200 poppins-medium cursor-pointer my-2">Book Event</h3></a>
+            <a href="https://samosa.odoo.com"><h3 className="text-zinc-200 poppins-medium cursor-pointer my-2">Book Event</h3></a>
             {/* <h3 className="text-zinc-200 poppins-medium cursor-pointer">Our Menus</h3> */}
             {/* <h3 className="text-zinc-200 poppins-medium cursor-pointer">Contact Us</h3> */}
             </div>
           </div>
           <div className="">
-            <h2 className="poppins-bold text-xl mb-4 text-[#FFCA15]">
+            <h2 className="poppins-bold text-xl mb-4 mt-5 md:mt-0 text-[#FFCA15]">
               CONNECT
             </h2>
             <div className='space-y-2'>
@@ -59,7 +59,7 @@ const Footer = ({openForm}) => {
             </div>
           </div>
           <div className="">
-            <h2 className="poppins-bold text-xl mb-4 text-[#FFCA15]">
+            <h2 className="poppins-bold text-xl mb-4 mt-5 md:mt-0 text-[#FFCA15]">
               SUPPORT
             </h2>
             <div className='space-y-2'>
@@ -67,8 +67,12 @@ const Footer = ({openForm}) => {
             <h3 className="text-zinc-200 poppins-medium cursor-pointer">
               <a href="mailto:ndn.foods.maastricht@gmail.com">Get in touch</a>
             </h3>
-            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Reservations</h3>
-            <h3 className="text-zinc-200 poppins-medium cursor-pointer">Help center</h3>
+            <h3 className="text-zinc-200 poppins-medium cursor-pointer">
+              <a href="mailto:ndn.foods.maastricht@gmail.com">Reservations</a>
+            </h3>
+            <h3 className="text-zinc-200 poppins-medium cursor-pointer">
+              <a href="mailto:ndn.foods.maastricht@gmail.com">Help center</a>
+            </h3>
             
             </div>
           </div>
@@ -80,7 +84,7 @@ const Footer = ({openForm}) => {
           <div className="text-black text-sm md:text-base poppins-medium text-center">
             <h3>Copyright © 2025 rollwithsamosa.com - All Rights Reserved.</h3>
           </div>
-          {/* <div><h2 className='poppins-semibold'>Crafted with ❤️ by <a href="https://gravityglobal.in" className='text-blue-500'>Gravity Global Solution</a></h2></div> */}
+          <h2 className='poppins-semibold text-center '>Crafted with ❤️ by <a href="https://gravityglobal.in">Gravity Global Solution</a></h2>
           <div className="flex gap-5 text-sm md:text-base text-black poppins-medium mt-2 md:">
             <Link to={"privacy"}><h3>Privacy Policy</h3></Link>
             <Link to={"terms"}><h3>Terms & Condition</h3></Link>            
