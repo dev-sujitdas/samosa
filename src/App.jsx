@@ -15,6 +15,7 @@ import { Link, Route, Routes } from 'react-router-dom'
 import BoardGame from './pages/BoardGame'
 import Contact from './pages/Contact'
 import OurMenu from './pages/OurMenu'
+import Privacy from './pages/Privacy'
 
 
 const App = () => {
@@ -47,6 +48,8 @@ const App = () => {
         <Route path='/boardgame' element={<BoardGame />} />        
         <Route path='/ourmenu' element={<OurMenu />} />        
         <Route path='/contact' element={<Contact />} />
+        <Route path='/privacy' element={<Privacy/>} />
+        <Route path='/terms' element={<Privacy/>} />
       </Routes>
       <Footer openForm={openForm} />
       {isOpen && <BookingForm closeForm={closeForm} />}

@@ -3,7 +3,7 @@ import Button from './ui/Button'
 
 const CTA = ({openForm}) => {
   const openFormHandler = () => {
-        console.log("form open")
+        // console.log("form open")
         openForm()
     }
 

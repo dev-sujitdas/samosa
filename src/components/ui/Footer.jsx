@@ -80,9 +80,10 @@ const Footer = ({openForm}) => {
           <div className="text-black text-sm md:text-base poppins-medium text-center">
             <h3>Copyright © 2025 rollwithsamosa.com - All Rights Reserved.</h3>
           </div>
+          {/* <div><h2 className='poppins-semibold'>Crafted with ❤️ by <a href="https://gravityglobal.in" className='text-blue-500'>Gravity Global Solution</a></h2></div> */}
           <div className="flex gap-5 text-sm md:text-base text-black poppins-medium mt-2 md:">
-            <h3>Privacy Policy</h3>
-            <h3>Terms & Condition</h3>
+            <Link to={"privacy"}><h3>Privacy Policy</h3></Link>
+            <Link to={"terms"}><h3>Terms & Condition</h3></Link>            
           </div>
         </div>
       </div>
