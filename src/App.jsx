@@ -3,8 +3,6 @@ import { Link, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Navbar from "./components/ui/Navbar";
 import Hero from "./components/Hero";
-import Events from "./components/Events";
-import Games from "./components/Games";
 import CTA from "./components/CTA";
 import Marquee from "./components/Marquee";
 import Snacks from "./components/Snacks";
@@ -16,6 +14,8 @@ import Loader from "./components/ui/Loader";
 import LocomotiveScroll from "locomotive-scroll";
 
 // Lazy only pages
+const Events = React.lazy(()=>import("./components/Events"));
+const Games = React.lazy(()=>import("./components/Games"));
 const BoardGame = React.lazy(() => import("./pages/BoardGame"));
 const Contact = React.lazy(() => import("./pages/Contact"));
 const OurMenu = React.lazy(() => import("./pages/OurMenu"));
