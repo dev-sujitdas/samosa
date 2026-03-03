@@ -127,19 +127,27 @@ const Hero = ({ openForm }) => {
             </div>
 
             <div className='images2 middle relative xl:hidden block w-full h-full'>
-                    {img2.map((image, index)=>(
+                    {img2.map((image, index) => (
                         <motion.div
-                        key={index}                
-                        className="absolute w-30 md:w-48 lg:w-58 rounded-xl overflow-hidden shadow-xl -translate-x-1/2"
-                        style={{
-                            left: image.left,
-                            top: image.top,                            
-                            height: image.size,
-                            rotate: image.rotate                            
-                        }}
-                    >
-                        <img src={image.url} className="w-full h-full object-cover rounded-xl" />
-                    </motion.div>
+                            key={index}
+                            className="absolute w-30 md:w-48 lg:w-58 rounded-xl overflow-hidden shadow-xl -translate-x-1/2"
+                            style={{
+                                left: image.left,
+                                top: image.top,
+                                height: image.size,
+                                rotate: image.rotate
+                            }}
+                            animate={{ rotate: [image.rotate || 0, '5deg', '-5deg', image.rotate || 0] }}
+                            transition={{
+                                duration: 4,
+                                repeat: Infinity,
+                                repeatType: 'loop',
+                                ease: 'easeInOut',
+                                delay: index * 0.2
+                            }}
+                        >
+                            <img src={image.url} className="w-full h-full object-cover rounded-xl" />
+                        </motion.div>
                     ))}
             </div>
 
