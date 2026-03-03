@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, Suspense } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
 import './App.css'
+import Loader from "./components/ui/Loader";
 import Navbar from "./components/ui/Navbar";
 import Hero from "./components/Hero";
 import CTA from "./components/CTA";
@@ -9,7 +10,6 @@ import Snacks from "./components/Snacks";
 import Footer from "./components/ui/Footer";
 import BookingForm from "./components/features/BookingForm";
 import Bubble from "./components/ui/Bubble";
-import Loader from "./components/ui/Loader";
 
 import LocomotiveScroll from "locomotive-scroll";
 
@@ -20,7 +20,7 @@ const BoardGame = React.lazy(() => import("./pages/BoardGame"));
 const Contact = React.lazy(() => import("./pages/Contact"));
 const OurMenu = React.lazy(() => import("./pages/OurMenu"));
 const Privacy = React.lazy(() => import("./pages/Privacy"));
-
+const Terms = React.lazy(()=>import("./pages/Terms"));
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +31,6 @@ const App = () => {
 
   useEffect(() => {
     scrollRef.current = new LocomotiveScroll({ smooth: true });
-
     return () => scrollRef.current.destroy();
   }, []);
 
@@ -46,7 +45,7 @@ const App = () => {
   return (
     <div>
       {isLoading ? (<Loader isLoading={isLoading} />) : (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader isLoading={isLoading} />}>
           <Navbar openForm={openForm} />
           <Routes>
             <Route path='/' element={
@@ -64,13 +63,12 @@ const App = () => {
             <Route path='/ourmenu' element={<OurMenu />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/privacy' element={<Privacy />} />
-            <Route path='/terms' element={<Privacy />} />
+            <Route path='/terms' element={<Terms/>} />
           </Routes>
           <Footer openForm={openForm} />
           {isOpen && <BookingForm closeForm={closeForm} />}
         </Suspense>
       )}
-
     </div>
   )
 }

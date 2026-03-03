@@ -162,7 +162,7 @@ const Hero = ({ openForm }) => {
                             delay: index * 0.15,
                             ease: "easeInOut",
                         }}
-                        className="absolute xl:w-48 2xl:w-62 rounded-xl overflow-hidden shadow-xl -translate-x-1/2"
+                        className="absolute w-52 xl:w-48 2xl:w-62 rounded-xl overflow-hidden shadow-xl -translate-x-1/2"
                         style={{
                             left: img.left,
                             top: img.top,

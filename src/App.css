@@ -2,6 +2,10 @@
    display: none; 
 } */
 
+body{
+  background: #2F4A2C;
+}
+
 #root{
   background: #2F4A2C;
 }
