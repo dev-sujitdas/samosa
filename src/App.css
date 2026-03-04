@@ -167,6 +167,9 @@ body{
   font-weight: 700;
 }
 
+/* .images2{
+  opacity: 0;
+} */
 
 .marquee-container::-webkit-scrollbar{  
   display: none;

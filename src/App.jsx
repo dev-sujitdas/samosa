@@ -12,6 +12,7 @@ import BookingForm from "./components/features/BookingForm";
 import Bubble from "./components/ui/Bubble";
 
 import LocomotiveScroll from "locomotive-scroll";
+import FallbackLoader from './components/ui/FallbackLoader';
 
 // Lazy only pages
 const Events = React.lazy(()=>import("./components/Events"));
@@ -45,12 +46,12 @@ const App = () => {
   return (
     <div>
       {isLoading ? (<Loader isLoading={isLoading} />) : (
-        <Suspense fallback={<Loader isLoading={isLoading} />}>
+        <Suspense fallback={<FallbackLoader/>}>
           <Navbar openForm={openForm} />
           <Routes>
             <Route path='/' element={
               <div className='max-w-600 mx-auto overflow-hidden relative'>
-                <Hero openForm={openForm} />
+                <Hero openForm={openForm} />                
                 <Events />
                 <Games />
                 <CTA openForm={openForm} />
