@@ -32,7 +32,7 @@ const Hero = ({ openForm }) => {
         <div className='w-full h-dvh md:h-screen p-5 md:p-12 2xl:p-14 color-primary flex flex-col justify-between'>
             <div className='h-full max-w-600 mx-auto flex flex-col justify-evenly items-center'>
                 <div className='wifull lg:w-[80%] mt-12'>
-                    <h1 className='text-4xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl poppins-bold text-[#F6A230] tracking-tighter text-center'>Every move comes with samosas.</h1>
+                    <h1 className='text-[2.35rem] md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-[7.5rem] poppins-bold text-[#F6A230] tracking-tighter leading-12 md:leading-none text-center'>Every move comes with samosas.</h1>
                 </div>
                 <div className='images2 middle relative w-full h-[30%] lg:h-[40%]'>
                     {img2.map((image, index) => {
@@ -74,8 +74,8 @@ const Hero = ({ openForm }) => {
                     <h2 className='text-white text-2xl md:text-3xl 2xl:text-4xl poppins-light mb-4 xl:mb-3 2xl:mb-5 text-center'>Dive into a world of board games, crispy bites, and endless laughter.</h2>
                 </div>
                 <div className='flex md:flex-row flex-col gap-5'>
-                    <button onClick={openFormHandler} className='px-6 py-2 bg-[#F6A230] rounded-full text-base md:text-xl 2xl:text-2xl poppins-regular flex justify-between items-center gap-2'>Book a Table <MdArrowOutward className='text-2xl ' /></button>
-                    <button onClick={redirectHandler} className='px-6 py-2 bg-amber-50 rounded-full text-base md:text-xl 2xl:text-2xl poppins-regular flex justify-between items-center gap-2'>Register Event <MdArrowOutward className='text-2xl ' /></button>
+                    <button onClick={openFormHandler} className='px-6 py-2 bg-[#F6A230] rounded-full text-base md:text-xl 2xl:text-2xl poppins-regular flex justify-between items-center gap-2 cursor-pointer'>Book a Table <MdArrowOutward className='text-2xl ' /></button>
+                    <button onClick={redirectHandler} className='px-6 py-2 bg-amber-50 rounded-full text-base md:text-xl 2xl:text-2xl poppins-regular flex justify-between items-center gap-2 cursor-pointer'>Register Event <MdArrowOutward className='text-2xl ' /></button>
                 </div>
             </div>
         </div>

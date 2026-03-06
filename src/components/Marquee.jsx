@@ -16,7 +16,7 @@ const Marquee = () => {
             <div className='marquee_track flex flex-nowrap whitespace-nowrap will-change-transform'>
                 <div className='marquee_list flex whitespace-nowrap gap-10 md:gap-20'>
                     {[...text, ...text].map((t, i) => (
-                        <h2 key={i} className='text-6xl md:text-[4rem] lg:text-[8rem] xl:text-[9rem] monoton-regular items-end-safe flex gap-10 text-zinc-100 mr-5'>
+                        <h2 key={i} className='text-6xl md:text-[4rem] lg:text-[8rem] xl:text-[8rem] monoton-regular items-end-safe flex gap-10 text-zinc-100 mr-5'>
                             {/* <span style={{ margin: t.margin }}>{t.icon}</span> */}
                             <span>{t.name}</span>
                         </h2>

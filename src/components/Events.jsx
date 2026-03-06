@@ -106,7 +106,7 @@ const Events = () => {
             <div className='w-full mt-10 p-5 md:p-14'>
                 <h3 className='text-end text-sm md:text-xl uppercase poppins-bold tracking-tight text-[#FFCA15]'>Roll Dice, Break Snacks, Make Memories</h3>
                 <div className='w-full md:w-[85%] mt-10'>
-                    <h2 className='text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl poppins-medium tracking-tighter text-white'>Serving Playful Bites and Playful Nights.</h2>
+                    <h2 className='text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[7.5rem] poppins-medium tracking-tighter text-white'>Serving Playful Bites and Playful Nights.</h2>
                 </div>
             </div>
             <div className='marquee_track flex flex-nowrap whitespace-nowrap will-change-transform'>
