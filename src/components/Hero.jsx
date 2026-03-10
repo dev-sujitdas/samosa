@@ -19,7 +19,7 @@ const Hero = ({ openForm }) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setStartAnimation(true);
-        }, 500);
+        }, 700);
 
         return () => clearTimeout(timer);
     }, []);
@@ -39,7 +39,7 @@ const Hero = ({ openForm }) => {
     return (
         <div className='w-full h-dvh md:h-screen p-5 md:p-12 2xl:p-14 color-primary flex flex-col justify-between'>
             <div className='h-full max-w-600 mx-auto flex flex-col justify-evenly items-center'>
-                <div className='wifull lg:w-[80%] mt-12'>
+                <div className='w-full lg:w-[80%] mt-12'>
                     <h1 className='text-[2.35rem] md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-[7.5rem] poppins-bold text-[#F6A230] tracking-tighter leading-12 md:leading-none text-center'>Every move comes with samosas.</h1>
                 </div>
                 <div className='images2 middle relative w-full h-[30%] lg:h-[40%]'>
