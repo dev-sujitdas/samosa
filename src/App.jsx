@@ -3,7 +3,6 @@ import { Link, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Loader from "./components/ui/Loader";
 import Navbar from "./components/ui/Navbar";
-import Hero from "./components/Hero";
 import CTA from "./components/CTA";
 import Marquee from "./components/Marquee";
 import Snacks from "./components/Snacks";
@@ -15,6 +14,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import FallbackLoader from './components/ui/FallbackLoader';
 
 // Lazy only pages
+const Hero = React.lazy(()=>import('./components/Hero'));
 const Events = React.lazy(()=>import("./components/Events"));
 const Games = React.lazy(()=>import("./components/Games"));
 const BoardGame = React.lazy(() => import("./pages/BoardGame"));

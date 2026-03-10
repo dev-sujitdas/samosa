@@ -14,16 +14,24 @@ const img2 = [
 
 const Hero = ({ openForm }) => {
     const [isLarge, setIsLarge] = useState(false);
+    const [startAnimation, setStartAnimation] = useState(false);
 
     useEffect(() => {
-        const resizeHandler = () => {
-            setIsLarge(window.innerWidth > 1024);
-        }
-        resizeHandler();
-        window.addEventListener('resize', resizeHandler);
+        const timer = setTimeout(() => {
+            setStartAnimation(true);
+        }, 500);
 
-        return () => window.removeEventListener('resize', resizeHandler);
-    }, [])
+        return () => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        const resizeHandler = () => setIsLarge(window.innerWidth > 1024);
+
+        resizeHandler();
+
+        window.addEventListener("resize", resizeHandler);
+        return () => window.removeEventListener("resize", resizeHandler);
+    }, []);
 
     const openFormHandler = () => openForm();
     const redirectHandler = () => window.location.href = "https://samosa.odoo.com/";
@@ -50,9 +58,9 @@ const Hero = ({ openForm }) => {
                                     rotate: image.rotate
                                 }}
                                 initial={{ scale: 0.5, opacity: 0 }}
-                                animate={{ scale: 1, opacity: 1 }}
+                                animate={startAnimation ? { scale: 1, opacity: 1 } : {}}
                                 transition={{
-                                    type: 'spring',
+                                    type: "spring",
                                     stiffness: 400,
                                     damping: 20,
                                     delay: index * 0.08
