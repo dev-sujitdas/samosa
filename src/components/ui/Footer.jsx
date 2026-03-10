@@ -82,7 +82,7 @@ const Footer = ({openForm}) => {
       <div className="w-full color-secondry mt-2 px-5 lg:px-14 py-2">
         <div className=" flex lg:flex-row flex-col justify-between items-center">
           <div className="text-black text-sm md:text-base poppins-medium text-center">
-            <h3>Copyright © 2025 rollwithsamosa.com - All Rights Reserved.</h3>
+            <h3>Copyright © 2025 rollwithsamosa.com</h3>
           </div>
           <h2 className='poppins-semibold text-center text-sm md:text-base hidden xl:block'>Crafted with ❤️ by <a href="https://gravityglobal.in">Gravity Global Solution</a></h2>
           <div className="flex gap-5 text-sm md:text-base text-black poppins-medium mt-2 md:">
