@@ -26,7 +26,7 @@ const Hero = ({ openForm }) => {
     }, [])
 
     const openFormHandler = () => openForm();
-    const redirectHandler = () => window.location.href = "https://samosa.odoo.com/shop";
+    const redirectHandler = () => window.location.href = "https://samosa.odoo.com/";
 
     return (
         <div className='w-full h-dvh md:h-screen p-5 md:p-12 2xl:p-14 color-primary flex flex-col justify-between'>

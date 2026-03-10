@@ -10,7 +10,7 @@ const Footer = ({openForm}) => {
           <div className="flex  items-center gap-2">
             <img src="/images/logo2-bg.png" className='h-16 w-42 md:h-20 md:w-52' />
           </div>
-          <div className="mt-8 flex gap-5">
+          {/* <div className="mt-8 flex gap-5">
             <a href="https://www.facebook.com/qeske.maastricht/">
               <h2 className="text-white text-4xl">
                 <i className="ri-facebook-box-fill"></i>
@@ -21,8 +21,8 @@ const Footer = ({openForm}) => {
                 <i className="ri-linkedin-box-fill"></i>
               </h2>
             </a>
-          </div>
-          <div className="mt-3">
+          </div> */}
+          <div className="mt-10">
             <h3 className="text-zinc-50">
               Grote Gracht 40
               Maastricht, <br /> 6211 SX
