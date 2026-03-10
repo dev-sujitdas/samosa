@@ -25,12 +25,14 @@ const Hero = ({ openForm }) => {
     }, []);
 
     useEffect(() => {
-        const resizeHandler = () => setIsLarge(window.innerWidth > 1024);
+        const media = window.matchMedia("(min-width: 1024px)");
 
-        resizeHandler();
+        const handler = (e) => setIsLarge(e.matches);
 
-        window.addEventListener("resize", resizeHandler);
-        return () => window.removeEventListener("resize", resizeHandler);
+        setIsLarge(media.matches);
+
+        media.addEventListener("change", handler);
+        return () => media.removeEventListener("change", handler);
     }, []);
 
     const openFormHandler = () => openForm();
@@ -39,9 +41,13 @@ const Hero = ({ openForm }) => {
     return (
         <div className='w-full h-dvh md:h-screen p-5 md:p-12 2xl:p-14 color-primary flex flex-col justify-between'>
             <div className='h-full max-w-600 mx-auto flex flex-col justify-evenly items-center'>
-                <div className='w-full lg:w-[80%] mt-12'>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className='w-full lg:w-[80%] mt-12'>
                     <h1 className='text-[2.35rem] md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-[7.5rem] poppins-bold text-[#F6A230] tracking-tighter leading-12 md:leading-none text-center'>Every move comes with samosas.</h1>
-                </div>
+                </motion.div>
                 <div className='images2 middle relative w-full h-[30%] lg:h-[40%]'>
                     {img2.map((image, index) => {
                         const baseName = image.url;
@@ -67,8 +73,7 @@ const Hero = ({ openForm }) => {
                                 }}
                             >
                                 <img
-                                    src={`${baseName}`}
-                                    srcSet={`${baseName}, ${baseName}`}
+                                    src={baseName}
                                     sizes="(min-width: 1024px) 12vw, 25vw"
                                     alt=""
                                     className="w-full h-full object-cover rounded-xl"
