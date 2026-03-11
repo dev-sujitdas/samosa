@@ -8,17 +8,17 @@ import { MdArrowOutward } from "react-icons/md";
 const instaId = "https://www.instagram.com/reel/DTjRXLviKvE/?igsh=MTZneWliOW4xZmh2dw==";
 
 const marquees = [
-    { url: "/images/img1.jpg", tag: "img", title: "Game Night Chronicles", insta: instaId },
-    { url: "/images/img2.jpg", tag: "img", title: "Boxes of Joy", insta: instaId },
+    { url: "/images/img1.webp", tag: "img", title: "Game Night Chronicles", insta: instaId },
+    { url: "/images/img2.webp", tag: "img", title: "Boxes of Joy", insta: instaId },
     { url: "/videos/vid1.mp4", tag: "vid", title: "Strategy Meets Laughter", insta: "https://www.instagram.com/reel/DUEkkgRDHfw/?igsh=MWdzcHI3Z2lsbGpybw==" },
-    { url: "/images/img3.jpg", tag: "img", title: "Cards, Drink & Chaos", insta: instaId },
-    { url: "/images/img4.jpg", tag: "img", title: "Moments Between Moves", insta: instaId },
+    { url: "/images/img3.webp", tag: "img", title: "Cards, Drink & Chaos", insta: instaId },
+    { url: "/images/img4.webp", tag: "img", title: "Moments Between Moves", insta: instaId },
     { url: "/videos/vid2.mp4", tag: "vid", title: "The Art of Play", insta: "https://www.instagram.com/reel/DURYGmTgEWl/?igsh=cTlja2lmMXlpZDU3" },
-    { url: "/images/img5.jpg", tag: "img", title: "The Winning Table", insta: instaId },
-    { url: "/images/img6.jpg", tag: "img", title: "Play Beyond the Board", insta: instaId },
+    { url: "/images/img5.webp", tag: "img", title: "The Winning Table", insta: instaId },
+    { url: "/images/img6.webp", tag: "img", title: "Play Beyond the Board", insta: instaId },
     { url: "/videos/vid3.mp4", tag: "vid", title: "The Strategy Social", insta: "https://www.instagram.com/reel/DU_1GZCiHx9/?igsh=Zzk5OGtxNjE0dm93" },
-    { url: "/images/img7.jpg", tag: "img", title: "Roll. Play. Repeat.", insta: instaId },
-    { url: "/images/img8.jpg", tag: "img", title: "Think. Laugh. Play.", insta: instaId },
+    { url: "/images/img7.webp", tag: "img", title: "Roll. Play. Repeat.", insta: instaId },
+    { url: "/images/img8.webp", tag: "img", title: "Think. Laugh. Play.", insta: instaId },
     { url: "/videos/vid4.mp4", tag: "vid", title: "Threads of Joy", insta: "https://www.instagram.com/reel/DVMaCDGgG0M/?igsh=MTFjYWY5MHRwZ3FleA==" },
 ];
 
@@ -163,7 +163,7 @@ const Events = () => {
                     <div className='middle w-full lg:w-[42%] h-120 flex flex-col justify-between'>
                         <div className='flex h-[49%] justify-between '>
                             <div className='image w-[49%] h-full rounded-2xl overflow-hidden'>
-                                <img src="/images/table.jpg" className='w-full h-full object-cover object-top rounded-2xl hover:scale-110 duration-300' />
+                                <img src="/images/table.webp" className='w-full h-full object-cover object-top rounded-2xl hover:scale-110 duration-300' />
                             </div>
                             <div className='content w-[49%] h-full flex flex-col justify-between p-5 rounded-2xl border border-[#FFCA15] '>
                                 <h2 className='text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl  poppins-bold text-white tracking-tighter'>{tables}</h2>
@@ -181,7 +181,7 @@ const Events = () => {
                                 </div>
                             </div>
                             <div className='image w-[49%] h-full rounded-2xl overflow-hidden'>
-                                <img src="/images/samosa.jpg" className='w-full h-full object-cover rounded-2xl hover:scale-110 duration-300' />
+                                <img src="/images/samosa.webp" className='w-full h-full object-cover rounded-2xl hover:scale-110 duration-300' />
                             </div>
                         </div>
 

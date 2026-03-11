@@ -8,10 +8,10 @@ import { RxLapTimer } from "react-icons/rx";
 import Button from "./ui/Button";
 
 const floatImages = [
-    { url: "/float-images/dice2.png", top: "50%", left: "85%", sizeHeight: "10rem", sizeWidth: "10rem", rotation: "5deg" },
-    { url: "/float-images/puzzle-piece.png", top: "25%", left: "10%", sizeHeight: "15rem", sizeWidth: "15rem", rotation: "0deg" },
-    { url: "/float-images/chess-piece.png", top: "90%", left: "75%", sizeHeight: "15rem", sizeWidth: "7.2rem", rotation: "-40deg" },
-    { url: "/float-images/chess-game2.png", top: "75%", left: "10%", sizeHeight: "20rem", sizeWidth: "8.5rem", rotation: "20deg" },
+    { url: "/float-images/dice2.webp", top: "50%", left: "85%", sizeHeight: "10rem", sizeWidth: "10rem", rotation: "5deg" },
+    { url: "/float-images/puzzle-piece.webp", top: "25%", left: "10%", sizeHeight: "15rem", sizeWidth: "15rem", rotation: "0deg" },
+    { url: "/float-images/chess-piece.webp", top: "90%", left: "75%", sizeHeight: "15rem", sizeWidth: "7.2rem", rotation: "-40deg" },
+    { url: "/float-images/chess-game2.webp", top: "75%", left: "10%", sizeHeight: "20rem", sizeWidth: "8.5rem", rotation: "20deg" },
 ];
 
 const Games = () => {

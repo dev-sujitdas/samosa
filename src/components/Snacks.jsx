@@ -12,10 +12,10 @@ import Button from "./ui/Button";
 import { Link } from "react-router-dom";
 
 const floatImages = [
-  { url: "/float-images/bowl.png", top: "12%", left: "15%", size: "15VW", rotation: "-20deg" },
-  { url: "/float-images/samosa.png", top: "10%", left: "70%", size: "25VW", rotation: "40deg" },
-  { url: "/float-images/samosa.png", top: "50%", left: "5%", size: "20VW", rotation: "-20deg" },
-  { url: "/float-images/drink.png", top: "70%", left: "75%", size: "32VW", rotation: "5deg" },
+  { url: "/float-images/bowl.webp", top: "12%", left: "15%", size: "15VW", rotation: "-20deg" },
+  { url: "/float-images/samosa.webp", top: "10%", left: "70%", size: "25VW", rotation: "40deg" },
+  { url: "/float-images/samosa.webp", top: "50%", left: "5%", size: "20VW", rotation: "-20deg" },
+  { url: "/float-images/drink.webp", top: "70%", left: "75%", size: "32VW", rotation: "5deg" },
 ];
 
 const Snacks = ({ openForm }) => {
@@ -28,10 +28,8 @@ const Snacks = ({ openForm }) => {
     target: containerRef,
     offset: ["start end", "end start"],
   });
-
-  // Create a motionValue for each image's idle float (separate from parallax)
-  const yFloatRefs = useRef(floatImages.map(() => motionValue(0)));
-  // Keep references to running animation controls so we can stop them on unmount
+  
+  const yFloatRefs = useRef(floatImages.map(() => motionValue(0)));  
   const runningAnimsRef = useRef([]);
 
   useEffect(() => {
@@ -136,7 +134,7 @@ const Snacks = ({ openForm }) => {
         </div>
 
         <div className="samosa-plate w-full mt-10 flex justify-center items-center relative">
-          <img src="/images/samosa-plate.png" className=" h-48 w-80 md:h-80 md:w-120 lg:h-100 lg:w-142 xl:h-132 xl:w-182 rounded-2xl" alt="" />
+          <img src="/images/samosa-plate.webp" className=" h-48 w-80 md:h-80 md:w-120 lg:h-100 lg:w-142 xl:h-132 xl:w-182 rounded-2xl" alt="" />
         </div>
 
         <div className="mt-10">          

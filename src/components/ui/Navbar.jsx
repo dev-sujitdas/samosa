@@ -51,7 +51,7 @@ const Navbar = ({ openForm }) => {
       <div className='navbar w-full fixed top-0 z-999'>
         <div className='w-full max-w-600 mx-auto px-5 md:px-12 lg:px-16  bg-[#2f4a2c52] backdrop-blur-2xl relative'>
           <div className='flex justify-between items-center border-b py-4 border-[#16a1557e] '>
-            <div><a href="/"><img className='h-10 w-28 lg:h-14 lg:w-42 ' src="/images/logo2-bg.png" alt="" /></a></div>
+            <div><a href="/"><img className='h-10 w-28 lg:h-14 lg:w-42 ' src="/images/logo2-bg.webp" alt="" /></a></div>
             <div className='flex gap-2 md:gap-10 items-center'>
             <a href="https://samosa.odoo.com"><h2 className='text-lg lg:text-lg poppins-regular text-black px-1 py-1 lg:px-4 lg:py-1 rounded-full bg-white md:flex items-center md:gap-2 '><MdEventAvailable />{isSmall? "" : "Events"}</h2></a>
             {/* <Button text={"Explore Events"}/> */}
