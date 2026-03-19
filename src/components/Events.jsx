@@ -30,7 +30,7 @@ const Events = () => {
     const [isLarge, setIsLarge] = useState(false);
 
 
-    const games = useCounter(startCount ? 50 : 0, 100, 10);
+    const games = useCounter(startCount ? 50 : 0, 150, 10);
     const tables = useCounter(startCount ? 0 : 0, 10, 10);
     const players = useCounter(startCount ? 450 : 0, 500, 10);
 
@@ -156,7 +156,7 @@ const Events = () => {
                     <div className='left lg:w-[28%] xl:w-[25%] h-58 lg:h-120 flex flex-col justify-between p-5 rounded-2xl border border-[#FFCA15] '>
                         <h2 className='text-6xl md:text-7xl lg:text-6xl xl:text-8xl 2xl:text-9xl poppins-bold text-white tracking-tighter'>{games}+</h2>
                         <div>
-                            <h3 className='text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl text-[#FFCA15] poppins-semibold tracking-tighter'>Games in stock</h3>
+                            <h3 className='text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl text-[#FFCA15] poppins-semibold tracking-tighter'>Games to buy</h3>
                             <p className='text-base 2xl:text-lg poppins-light text-amber-50 mt-2'>From rare finds to crowd favorites</p>
                         </div>
                     </div>

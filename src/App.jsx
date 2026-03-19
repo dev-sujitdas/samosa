@@ -27,16 +27,14 @@ const Terms = React.lazy(() => import("./pages/Terms"));
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [heroReady, setHeroReady] = useState(false); // <-- wait for hero
+  const [heroReady, setHeroReady] = useState(false); 
   const scrollRef = useRef(null);
   const openForm = () => setIsOpen(true);
   const closeForm = () => setIsOpen(false);
-
-  // helper: requestIdleCallback fallback
+  
   const ric = typeof window !== 'undefined' && (window.requestIdleCallback || ((fn) => setTimeout(fn, 200)));
   const ricCancel = typeof window !== 'undefined' && (window.cancelIdleCallback || clearTimeout);
-
-  // Initialize locomotive AFTER heroReady (so heavy init doesn't clash with hero assets)
+  
   useEffect(() => {
     if (!heroReady) return;
     if (typeof window === 'undefined') return;
@@ -45,24 +43,22 @@ const App = () => {
     let loco = null;
 
     const init = () => {
-      try {
-        // Use an explicit scroll container so Locomotive can create layers properly
+      try {        
         const el = document.querySelector('[data-scroll-container]') || document.body;
         loco = new LocomotiveScroll({
           el,
           smooth: true,
-          // option: multiplier: 1, etc. tune to your site
+          // option: multiplier: 1,
         });
         scrollRef.current = loco;
-      } catch (err) {
-        // fail gracefully
+      } catch (err) {        
         console.warn('Locomotive init failed', err);
       }
     };
 
     idleHandle = ric ? ric(init) : init();
 
-    const onResize = () => loco && loco.update();
+    const onResize = () => loco ;
     window.addEventListener('resize', onResize);
 
     return () => {
