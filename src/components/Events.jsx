@@ -30,7 +30,8 @@ const Events = () => {
     const [isLarge, setIsLarge] = useState(false);
 
 
-    const games = useCounter(startCount ? 50 : 0, 150, 10);
+    const games = useCounter(startCount ? 150 : 0, 200, 10);
+    const games2 = useCounter(startCount ? 450: 0, 500, 10)
     const tables = useCounter(startCount ? 0 : 0, 10, 10);
     const players = useCounter(startCount ? 450 : 0, 500, 10);
 
@@ -154,9 +155,13 @@ const Events = () => {
                 </div>
                 <div ref={containerRef} className='event-container w-full flex lg:flex-row flex-col justify-between gap-5 xl:gap-10 mt-20'>
                     <div className='left lg:w-[28%] xl:w-[25%] h-58 lg:h-120 flex flex-col justify-between p-5 rounded-2xl border border-[#FFCA15] '>
-                        <h2 className='text-6xl md:text-7xl lg:text-6xl xl:text-8xl 2xl:text-9xl poppins-bold text-white tracking-tighter'>{games}+</h2>
                         <div>
-                            <h3 className='text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl text-[#FFCA15] poppins-semibold tracking-tighter'>Games to buy</h3>
+                        <h2 className='text-6xl md:text-7xl lg:text-6xl xl:text-8xl 2xl:text-9xl poppins-bold text-white tracking-tighter'>{games}+</h2>
+                        <h3 className='text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl text-[#FFCA15] poppins-semibold tracking-tighter'>Games to play</h3>
+                        </div>
+                        <div>
+                        <h2 className='text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl poppins-bold text-white tracking-tighter'>{games2}+</h2>
+                            <h3 className='text-xl md:text-2xl xl:text-2xl 2xl:text-3xl text-[#FFCA15] poppins-semibold tracking-tighter'>Games to buy</h3>
                             <p className='text-base 2xl:text-lg poppins-light text-amber-50 mt-2'>From rare finds to crowd favorites</p>
                         </div>
                     </div>

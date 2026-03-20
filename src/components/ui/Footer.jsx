@@ -23,7 +23,7 @@ const Footer = ({ openForm }) => {
         </div>
         
         <div className="xl:w-[80%] 2xl:w-[65%] w-full p-5 flex lg:flex-row flex-col lg:gap-10 xl:gap-10 2xl:gap-30 justify-between z-10">
-             <div className="map h-full w-62 rounded-2xl shadow-md">
+             <div className="map h-full md:w-70 lg:w-68 xl:w-70 2xl:w-80 rounded-2xl shadow-md">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2518.9311076028644!2d5.688105!3d50.85096!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0e975bb5006df%3A0x5950eef848765a34!2sDr.%20%26%20Dr.%20Samosa!5e0!3m2!1sen!2sus!4v1773942270226!5m2!1sen!2sus"
               className="h-full w-full rounded-2xl border-0"
@@ -69,15 +69,16 @@ const Footer = ({ openForm }) => {
             <h2 className="poppins-bold text-xl mb-4 mt-5 md:mt-0 text-[#FFCA15]">
               Timings
             </h2>
-            <div className='space-y-2'>
-
-              <h3 className="text-zinc-200 poppins-medium cursor-pointer">
-                Mon/Tue: 16:00 to 22:00
-              </h3>
-              <h3 className="text-zinc-200 poppins-medium cursor-pointer">
-                Wed-Sun: 12:00 to 22:00
-              </h3>
-
+            <div className='w-40'>
+              <h3 className="text-zinc-200 poppins-medium space-y-1">                
+                <li className='flex gap-4 justify-between'><span>Mon:</span><span>16:00 - 22:00</span></li>
+                <li className='flex gap-4 justify-between'><span>Tue:</span><span>16:00 - 22:00</span></li>
+                <li className='flex gap-4 justify-between'><span>Wed:</span><span>12:00 - 22:00</span></li>
+                <li className='flex gap-4 justify-between'><span>Thu:</span><span>12:00 - 22:00</span></li>
+                <li className='flex gap-4 justify-between'><span>Fri:</span><span>12:00 - 22:00</span></li>
+                <li className='flex gap-4 justify-between'><span>Sat:</span><span>12:00 - 22:00</span></li>
+                <li className='flex gap-4 justify-between'><span>Sun:</span><span>12:00 - 22:00</span></li>              
+              </h3>                              
             </div>
           </div>
          
