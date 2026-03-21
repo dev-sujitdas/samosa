@@ -22,6 +22,8 @@ const marquees = [
     { url: "/videos/vid4.mp4", tag: "vid", title: "Threads of Joy", insta: "https://www.instagram.com/reel/DVMaCDGgG0M/?igsh=MTFjYWY5MHRwZ3FleA==" },
 ];
 
+const Imgs = ["https://media.istockphoto.com/id/2242195642/photo/creative-shots-of-samosas.jpg?s=612x612&w=0&k=20&c=u7EK5rYzJAMsnseOt_ZDM7EVb_ZPxx2U-EcMk7xOwv8=", "/images/samosa.webp"]
+
 const Events = () => {
     const containerRef = useRef(null);
     const mouseRef = useRef(null);
@@ -31,19 +33,19 @@ const Events = () => {
 
 
     const games = useCounter(startCount ? 150 : 0, 200, 10);
-    const games2 = useCounter(startCount ? 450: 0, 500, 10)
+    const games2 = useCounter(startCount ? 450 : 0, 500, 10)
     const tables = useCounter(startCount ? 0 : 0, 10, 10);
     const players = useCounter(startCount ? 450 : 0, 500, 10);
 
-    useEffect(()=>{
-        const handleResize = ()=>{
+    useEffect(() => {
+        const handleResize = () => {
             setIsLarge(window.innerWidth > 1024);
         }
         handleResize();
         window.addEventListener('resize', handleResize);
 
-        return ()=> window.removeEventListener('resize', handleResize);
-    },[]);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     useEffect(() => {
         if (isInView) {
@@ -114,7 +116,7 @@ const Events = () => {
                 <div className='marquee_list flex whitespace-nowrap gap-10 mt-10 md:mt-30'>
                     {[...marquees, ...marquees].map((item, index) => (
                         <div
-                            key={index}                            
+                            key={`${item.url}-${index}`}
                             onMouseMove={isLarge ? handleMouseMove : undefined}
                             onMouseEnter={isLarge ? handleMouseEnter : undefined}
                             onMouseLeave={isLarge ? handleMouseLeave : undefined}
@@ -135,7 +137,7 @@ const Events = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div  className="mousefollower absolute top-0 left-0 h-28 w-28 rounded-full bg-black/30 backdrop-blur-sm  flex justify-center items-center opacity-0 pointer-events-none z-999">
+                            <div className="mousefollower absolute top-0 left-0 h-28 w-28 rounded-full bg-black/30 backdrop-blur-sm  flex justify-center items-center opacity-0 pointer-events-none z-999">
                                 <h3 className="poppins-medium text-zinc-200 text-sm text-center">View <br /> Instagram</h3>
                             </div>
                         </div>
@@ -156,11 +158,11 @@ const Events = () => {
                 <div ref={containerRef} className='event-container w-full flex lg:flex-row flex-col justify-between gap-5 xl:gap-10 mt-20'>
                     <div className='left lg:w-[28%] xl:w-[25%] h-58 lg:h-120 flex flex-col justify-between p-5 rounded-2xl border border-[#FFCA15] '>
                         <div>
-                        <h2 className='text-6xl md:text-7xl lg:text-6xl xl:text-8xl 2xl:text-9xl poppins-bold text-white tracking-tighter'>{games}+</h2>
-                        <h3 className='text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl text-[#FFCA15] poppins-semibold tracking-tighter'>Games to play</h3>
+                            <h2 className='text-6xl md:text-7xl lg:text-6xl xl:text-8xl 2xl:text-9xl poppins-bold text-white tracking-tighter'>{games}+</h2>
+                            <h3 className='text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl text-[#FFCA15] poppins-semibold tracking-tighter'>Games to play</h3>
                         </div>
                         <div>
-                        <h2 className='text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl poppins-bold text-white tracking-tighter'>{games2}+</h2>
+                            <h2 className='text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl poppins-bold text-white tracking-tighter'>{games2}+</h2>
                             <h3 className='text-xl md:text-2xl xl:text-2xl 2xl:text-3xl text-[#FFCA15] poppins-semibold tracking-tighter'>Games to buy</h3>
                             <p className='text-base 2xl:text-lg poppins-light text-amber-50 mt-2'>From rare finds to crowd favorites</p>
                         </div>
@@ -186,7 +188,14 @@ const Events = () => {
                                 </div>
                             </div>
                             <div className='image w-[49%] h-full rounded-2xl overflow-hidden'>
-                                <img src="/images/samosa.webp" className='w-full h-full object-cover rounded-2xl hover:scale-110 duration-300' />
+                                <img
+                                    src={Imgs[0]}
+                                    onError={(e) => {
+                                        e.currentTarget.onerror = null; // stop looping
+                                        e.currentTarget.src = Imgs[1];
+                                    }}
+                                    className='w-full h-full object-cover rounded-2xl hover:scale-110 duration-300'
+                                />
                             </div>
                         </div>
 
