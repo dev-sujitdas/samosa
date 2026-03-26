@@ -25,8 +25,8 @@ Fully responsive design
 Clean and engaging layout
 
 ## 🛠️ Tech Stack
-Frontend: React.js
-Styling: Tailwind CSS
-Animations: Framer Motion
-Smooth Scroll: Locomotive Scroll
+Frontend: React.js,
+Styling: Tailwind CSS,
+Animations: Framer Motion,
+Smooth Scroll: Locomotive Scroll,
 Booking System: Odoo (iframe integration)
