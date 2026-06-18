@@ -119,7 +119,7 @@ const Hero = ({ openForm, onReady }) => {
           transition={{ duration: 0.6 }}
           className="w-full lg:w-[80%] mt-12"
         >
-          <h1 className="text-[2.35rem] md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-[7.5rem] poppins-bold text-[#F6A230] tracking-tighter leading-12 md:leading-none text-center">
+          <h1 className={`text-[2.35rem] md:text-6xl xl:text-7xl 2xl:text-[7.5rem] poppins-bold text-[#F6A230] tracking-tighter leading-12 md:leading-none text-center`}>
             Every move comes with samosas.
           </h1>
         </motion.div>

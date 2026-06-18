@@ -32,10 +32,10 @@ const Events = () => {
     const [isLarge, setIsLarge] = useState(false);
 
 
-    const games = useCounter(startCount ? 1900 : 0, 2000, 10);
+    const games = useCounter(startCount ? 150 : 0, 200, 10);
     const games2 = useCounter(startCount ? 450 : 0, 500, 10)
     const tables = useCounter(startCount ? 0 : 0, 10, 10);
-    const players = useCounter(startCount ? 450 : 0, 500, 10);
+    const players = useCounter(startCount ? 1950 : 0, 2000, 10);
 
     useEffect(() => {
         const handleResize = () => {
@@ -158,7 +158,7 @@ const Events = () => {
                 <div ref={containerRef} className='event-container w-full flex lg:flex-row flex-col justify-between gap-5 xl:gap-10 mt-20'>
                     <div className='left lg:w-[28%] xl:w-[25%] h-58 lg:h-120 flex flex-col justify-between p-5 rounded-2xl border border-[#FFCA15] '>
                         <div>
-                            <h2 className='text-6xl md:text-7xl lg:text-6xl xl:text-8xl 2xl:text-9xl poppins-bold text-white tracking-tighter'>{games}+</h2>
+                            <h2 className='text-6xl md:text-7xl lg:text-6xl xl:text-8xl 2xl:text-8xl poppins-bold text-white tracking-tighter'>{games}+</h2>
                             <h3 className='text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl text-[#FFCA15] poppins-semibold tracking-tighter'>Games to play</h3>
                         </div>
                         <div>
@@ -201,7 +201,7 @@ const Events = () => {
 
                     </div>
                     <div className='right lg:w-[28%] xl:w-[25%] h-58 lg:h-120 flex flex-col justify-between p-5 rounded-2xl border border-[#FFCA15] '>
-                        <h2 className='text-6xl md:text-7xl lg:text-6xl xl:text-8xl 2xl:text-9xl  poppins-bold text-white tracking-tighter'>{players}+</h2>
+                        <h2 className='text-6xl md:text-7xl lg:text-6xl xl:text-8xl 2xl:text-8xl  poppins-bold text-white tracking-tighter'>{players}+</h2>
                         <div>
                             <h3 className='text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl text-[#FFCA15] poppins-semibold tracking-tighter'>Happy players</h3>
                             <p className='text-base 2xl:text-lg poppins-light text-amber-50 mt-2'>Who've made memories here</p>
