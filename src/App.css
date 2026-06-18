@@ -11,6 +11,12 @@ body{
   background: #2F4A2C;
 }
 
+.width-fit{
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .color-primary{
   background-color: #2F4A2C;
 }

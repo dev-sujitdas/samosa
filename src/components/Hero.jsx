@@ -173,8 +173,8 @@ const Hero = ({ openForm, onReady }) => {
             </button>
 
             <button
-              onClick={redirectHandler}
-              className="w-fit px-6 py-2 bg-amber-50 rounded-full text-base md:text-xl 2xl:text-2xl poppins-regular flex items-center gap-2 cursor-pointer"
+              onClick={redirectHandler}              
+              className="width-fit px-6 py-2 bg-amber-50 rounded-full text-base md:text-xl 2xl:text-2xl poppins-regular flex items-center gap-2 cursor-pointer"
             >
               Event <MdArrowOutward className="text-2xl" />
             </button>
