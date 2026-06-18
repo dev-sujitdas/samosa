@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom';
 
+
+const menus = [
+  "/images/menu_page-0001.jpg",
+  "/images/menu_page-0002.jpg",
+  "/images/menu_page-0003.jpg",
+  "/images/menu_page-0004.jpg",
+];
 const OurMenu = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
     const navigate = useNavigate();
@@ -13,11 +20,11 @@ const OurMenu = () => {
             <div className='w-full  lg:w-[80%] flex flex-col md:flex-row justify-between mt-10'>
                 <h3 className='text-zinc-400 text-xl poppins-regular'><span onClick={handleNavigate} className='text-[#F6A230] cursor-pointer'>Home</span>/Our Menu</h3>               
             </div>
-                <div className='mt-10 h-80 w-full md:h-160 md:w-[80%]  flex flex-col justify-center items-center relative bg-zinc-100 rounded-2xl overflow-hidden'>
-                    {/* <img src="/images/menu.jpg" alt="" className='rounded-2xl' /> */}
-                    <div className='absolute w-full h-full top-0 left-0 bg-[#9693933b] backdrop-blur-xl z-50 rounded-2xl flex justify-center items-center'>
-                        <h2 className='text-3xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl poppins-bold'>Coming Soon</h2>
-                    </div>
+                <div className='mt-10 w-full full md:w-[80%]  flex flex-col justify-center items-center relative rounded-lg overflow-hidden'>
+                    {menus.map((img, index)=>(
+                        img && <img key={index} src={img} className='w-full mb-2 rounded-lg' />
+                    ))}
+                    
                 </div>
         </section>
     )

@@ -71,7 +71,7 @@ const Footer = ({ openForm }) => {
             </h2>
             <div className='w-40'>
               <h3 className="text-zinc-200 poppins-medium space-y-1">                
-                <li className='flex gap-4 justify-between'><span>Mon:</span><span>16:00 - 22:00</span></li>
+                <li className='flex gap-4 justify-between'><span>Mon:</span><span>Closed</span></li>
                 <li className='flex gap-4 justify-between'><span>Tue:</span><span>16:00 - 22:00</span></li>
                 <li className='flex gap-4 justify-between'><span>Wed:</span><span>12:00 - 22:00</span></li>
                 <li className='flex gap-4 justify-between'><span>Thu:</span><span>12:00 - 22:00</span></li>

@@ -32,7 +32,7 @@ const Events = () => {
     const [isLarge, setIsLarge] = useState(false);
 
 
-    const games = useCounter(startCount ? 150 : 0, 200, 10);
+    const games = useCounter(startCount ? 1900 : 0, 2000, 10);
     const games2 = useCounter(startCount ? 450 : 0, 500, 10)
     const tables = useCounter(startCount ? 0 : 0, 10, 10);
     const players = useCounter(startCount ? 450 : 0, 500, 10);
