@@ -111,21 +111,22 @@ const Hero = ({ openForm, onReady }) => {
     (window.location.href = "https://samosa.odoo.com/");
 
   return (
-    <div className="w-full h-dvh md:min-h-screen  px-3 py-10 md:p-12 2xl:p-14 color-primary flex flex-col justify-between overflow-hidden">
-      <div className="h-full max-w-600 mx-auto flex flex-col justify-between items-center">
+    <div className="w-full h-dvh md:min-h-screen lg:h-screen px-3 py-10 md:p-12 2xl:p-14 color-primary flex flex-col justify-between overflow-hidden relative">
+      <div className="h-full w-full max-w-600 mx-auto flex flex-col justify-between items-center ">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: startAnimation ? 1 : 0 }}
           transition={{ duration: 0.6 }}
-          className="w-full lg:w-[80%] mt-12"
+          className="w-full h-auto lg:w-[80%] mt-12"
         >
           <h1 className={`text-[2.35rem] md:text-6xl xl:text-7xl 2xl:text-[7.5rem] poppins-bold text-[#F6A230] tracking-tighter leading-12 md:leading-none text-center`}>
             Every move comes with samosas.
           </h1>
         </motion.div>
 
-        <div className="images2 middle relative w-full h-[30%] lg:h-[40%] mt-5">
-          {img.map((image, index) => (
+        <div className="images2 middle absolute top-1/2 -translate-y-1/2 w-full h-[30%] xl:h-[40%] mt-2">
+          <div className="relative w-full h-full">
+            {img.map((image, index) => (
             <motion.div
               key={index}
               className="absolute rounded-xl overflow-hidden shadow-xl -translate-x-1/2"
@@ -154,10 +155,11 @@ const Hero = ({ openForm, onReady }) => {
               />
             </motion.div>
           ))}
+          </div>          
         </div>
 
-        <div className="w-full flex flex-col gap-5 items-center ">
-          <div className="w-full px-3 lg:w-[70%] xl:w-1/2 md:mt-40">
+        <div className="bottom w-full flex flex-col gap-5 items-center mt-15">
+          <div className="w-full px-3 lg:w-[70%] xl:w-1/2 ">
             <h2 className="text-white text-2xl md:text-3xl 2xl:text-4xl poppins-light mb-4 xl:mb-3 2xl:mb-5 text-center">
               Dive into a world of board games, crispy bites, and endless
               laughter.
