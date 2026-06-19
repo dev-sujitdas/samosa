@@ -64,31 +64,28 @@ const img = [
 const Hero = ({ openForm, onReady }) => {
   const [isLarge, setIsLarge] = useState(false);
   const [isTab, setIsTab] = useState(false);
-  const [startAnimation, setStartAnimation] = useState(false);
-  const [laptopRes, setLaptopRes] = useState(false);
+  const [startAnimation, setStartAnimation] = useState(false);  
 
   // Detect screen size
   useEffect(() => {
     const media = window.matchMedia("(min-width:1068px)");
     const mediaTab = window.matchMedia("(width:1024px) and (height:600px)");
-    const lapRes = window.matchMedia("(width:1680px)");
 
     const update = () => {
       setIsLarge(media.matches);
       setIsTab(mediaTab.matches);
-      setLaptopRes(lapRes.matches);
+
     };
 
     update();
 
     media.addEventListener("change", update);
     mediaTab.addEventListener("change", update);
-    lapRes.addEventListener("change", update);
 
     return () => {
       media.removeEventListener("change", update);
       mediaTab.removeEventListener("change", update);
-      lapRes.removeEventListener("change", update);
+
     };
   }, []);
 
