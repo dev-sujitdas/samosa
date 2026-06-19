@@ -65,25 +65,30 @@ const Hero = ({ openForm, onReady }) => {
   const [isLarge, setIsLarge] = useState(false);
   const [isTab, setIsTab] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);
+  const [laptopRes, setLaptopRes] = useState(false);
 
   // Detect screen size
   useEffect(() => {
     const media = window.matchMedia("(min-width:1068px)");
     const mediaTab = window.matchMedia("(width:1024px) and (height:600px)");
+    const lapRes = window.matchMedia("(width:1680px)");
 
     const update = () => {
       setIsLarge(media.matches);
       setIsTab(mediaTab.matches);
+      setLaptopRes(lapRes.matches);
     };
 
     update();
 
     media.addEventListener("change", update);
     mediaTab.addEventListener("change", update);
+    lapRes.addEventListener("change", update);
 
     return () => {
       media.removeEventListener("change", update);
       mediaTab.removeEventListener("change", update);
+      lapRes.removeEventListener("change", update);
     };
   }, []);
 
@@ -119,7 +124,7 @@ const Hero = ({ openForm, onReady }) => {
           transition={{ duration: 0.6 }}
           className="w-full h-auto lg:w-[80%] mt-12"
         >
-          <h1 className={`text-[2.35rem] md:text-6xl xl:text-7xl 2xl:text-[7.5rem] poppins-bold text-[#F6A230] tracking-tighter leading-12 md:leading-none text-center`}>
+          <h1 className={`text-[2.35rem] md:text-6xl xl:text-7xl 2xl:text-[6rem] poppins-bold text-[#F6A230] tracking-tighter leading-12 md:leading-18 text-center`}>
             Every move comes with samosas.
           </h1>
         </motion.div>
