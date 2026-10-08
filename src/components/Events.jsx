@@ -77,7 +77,7 @@ const Events = () => {
         const follower = e.currentTarget.querySelector(".mousefollower");
         if (!follower) return;
 
-        gsap.killTweensOf(follower); // 🔥 important
+        gsap.killTweensOf(follower); 
 
         gsap.fromTo(
             follower,
@@ -90,7 +90,7 @@ const Events = () => {
         const follower = e.currentTarget.querySelector(".mousefollower");
         if (!follower) return;
 
-        gsap.killTweensOf(follower); // 🔥 important
+        gsap.killTweensOf(follower); 
 
         gsap.to(follower, {
             scale: 0.5,
