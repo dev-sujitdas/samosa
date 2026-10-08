@@ -62,7 +62,7 @@ const Events = () => {
         const x = e.clientX - container.left - 50;
         const y = e.clientY - container.top - 50;
 
-        gsap.killTweensOf(follower); // 🔥 important
+        gsap.killTweensOf(follower); 
 
         gsap.to(follower, {
             opacity: 1,
@@ -191,7 +191,7 @@ const Events = () => {
                                 <img
                                     src={Imgs[0]}
                                     onError={(e) => {
-                                        e.currentTarget.onerror = null; // stop looping
+                                        e.currentTarget.onerror = null; 
                                         e.currentTarget.src = Imgs[1];
                                     }}
                                     className='w-full h-full object-cover rounded-2xl hover:scale-110 duration-300'
