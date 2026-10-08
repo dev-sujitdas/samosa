@@ -63,7 +63,7 @@ const Games = () => {
             <div className="xl:block hidden">
                 {floatImages.map((img, index) => {
 
-                    // Parallax effect → each image moves differently
+                    // Parallax effect for images
                     const yMove = useTransform(
                         scrollYProgress,
                         [0, 1],
